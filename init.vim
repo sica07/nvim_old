@@ -7,6 +7,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+
 "tree explorer
 Plug 'scrooloose/nerdtree'
 "nerdtree open in all tabs
