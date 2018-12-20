@@ -1,5 +1,5 @@
 " If php-cs-fixer is in $PATH, you don't need to define line below
-"let g:php_cs_fixer_path = "~/php-cs-fixer.phar" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_path = "~/.composer/vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
 let g:php_cs_fixer_level = "psr2"              " which level ?
 "let g:php_cs_fixer_config = "default"             " configuration
 let g:php_cs_fixer_config = "magento"             " configuration
@@ -13,3 +13,6 @@ let g:php_cs_fixer_verbose = 1                    " Return the output of command
 
 nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>x :call PhpCsFixerFixFile()<CR>
+
+"fix on save
+"autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()

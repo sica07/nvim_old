@@ -7,6 +7,7 @@ let g:phpactorOmniError = v:true
 
 " Invoke the context menu
 nmap <Leader>.. :call phpactor#ContextMenu()<CR>
+vmap <silent><Leader>.. :call phpactor#ContextMenu()<CR>
 " go to definition
 nmap <Leader>.d :call phpactor#GotoDefinition()<CR>
 nmap <cp-b> :call phpactor#GotoDefinition()<CR>

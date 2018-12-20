@@ -98,7 +98,7 @@ Plug 'hail2u/vim-css3-syntax'
 "support for haml,sass and scss syntax
 Plug 'tpope/vim-haml'
 "Emmmet
-Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'mattn/emmet-vim', {'for': ['html','php','phtml']}
 
 " PYTHON 
 Plug 'nvie/vim-flake8', {'for': 'python'}
@@ -111,8 +111,14 @@ Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 "preview in browser html, md, rdoc, textile, etc files
-Plug 'spf13/vim-preview'
+Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
+
+
+" Nyaovim"
+
+Plug 'rhysd/nyaovim-popup-tooltip'
+Plug 'rhysd/nyaovim-markdown-preview'
 
 
 call plug#end()
