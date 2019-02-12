@@ -2,16 +2,17 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_fortune_use_unicode = 1
 let g:startify_session_sort = 1
 let g:startify_use_env = 1
-let g:ascii = [
-          \ '        __',
-          \ '.--.--.|__|.--------.',
-          \ '|  |  ||  ||        |',
-          \ ' \___/ |__||__|__|__|',
-          \ ''
-          \]
-let g:startify_custom_header =
-      \ 'map(g:ascii + startify#fortune#boxed(), "\"   \".v:val")'
-let g:startify_bookmarks = [{'fsp':'~/Templates/FSPlaza.laravel'},{'api':'~/Templates/api'}]
+"let g:ascii = [
+          "\ '        __',
+          "\ '.--.--.|__|.--------.',
+          "\ '|  |  ||  ||        |',
+          "\ ' \___/ |__||__|__|__|',
+          "\ ''
+          "\]
+let g:startify_custom_header =""
+"let g:startify_custom_header =
+      "\ 'map(g:ascii + startify#fortune#boxed(), "\"   \".v:val")'
+let g:startify_bookmarks = [{'fsp':'~/Templates/FSPlaza.laravel'},{'api':'~/Templates/api'},{'mpbv':'~/Templates/mpbv'},{'sandbox':'~/Templates/sandbox'},{'centrale':'~/Templates/centrale-des-marches/website'}]
 
 function! s:list_commits()
     let git = 'git -C ' .getcwd()
