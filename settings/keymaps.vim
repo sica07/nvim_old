@@ -39,6 +39,9 @@ imap <C-.> <space>=><space>
 " ,oq to open it back up (rare)
 nmap <silent> <C-q>c :cclose<CR>
 nmap <silent> <C-q>o :copen<CR>
+"open location list
+nmap <silent> <C-q>l :lopen<CR>
+nmap <silent> <C-q>x :lclose<CR>
 " Stolen from Steve Losh vimrc: https://bitbucket.org/sjl/dotfiles/src/tip/vim/.vimrc
 " Open a Quickfix window for the last search.
 nnoremap <silent> <C-q>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
