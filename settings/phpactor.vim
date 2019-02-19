@@ -11,7 +11,7 @@ nmap <Leader>.. :call phpactor#ContextMenu()<CR>
 vmap <silent><Leader>.. :call phpactor#ContextMenu()<CR>
 " go to definition
 nmap <Leader>.d :call phpactor#GotoDefinition()<CR>
-nmap <c-b> :call phpactor#GotoDefinition()<CR>
+"nmap <c-b> :call phpactor#GotoDefinition()<CR>
 
 " Extract method from selection
 vmap <silent><Leader>.em :<C-U>call phpactor#ExtractMethod()<CR>

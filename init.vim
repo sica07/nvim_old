@@ -110,7 +110,7 @@ Plug 'python-mode/python-mode', {'for': 'python'}
 " Misc
 Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
 Plug 'vimwiki/vimwiki'
-Plug 'tpope/vim-markdown', {'for': 'markdown'}
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
@@ -154,6 +154,7 @@ set autowriteall                " Automatically write the file when switching bu
 set ruler                       " Show cursor position all the time
 set hidden                      " Allow buffer switching without saving 
 set clipboard=unnamed           " Yank to the default register (*) by default
+set lazyredraw                  " Dont redraw automatically to speed up refresh, especially with relative numbers
 syntax on                       " Syntax highligt on
 let mapleader=","               " Change the leader to be a comma vs slash
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
@@ -218,8 +219,7 @@ set wildignore+=*.git*
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
-set wildignore+=vendor/**
-set wildignore+=vendor/**
+"set wildignore+=vendor/**
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
@@ -250,7 +250,8 @@ if has("gui_running")	" GUI color and font settings
     colorscheme dracula
 elseif has("termguicolors")
     set termguicolors
-    color atom
+    "color atom
+    color base16-github
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"

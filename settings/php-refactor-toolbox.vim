@@ -26,7 +26,8 @@ function! RefactorMenu()
     elseif menu == "rm" 
         :call PhpRenameMethod()<CR>
     elseif menu == "em"
-        :call phpactor#ExtractMethod()<CR>
+        ":call phpactor#ExtractMethod()<CR>
+        :call PhpExtractMethod()<CR>
     elseif menu == "eu" 
         :call PhpExtractUse()<CR>
     elseif menu == "ep" 
