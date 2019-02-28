@@ -1,4 +1,4 @@
-  let g:vimwiki_list = [{'path': '~/Dropbox/Apps/vimwiki/',
+  let g:vimwiki_list = [{'path': '~/pCloudDrive/Apps/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md', 
                        \ 'auto_tags': 1}]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P
@@ -20,7 +20,7 @@ let g:tagbar_type_vimwiki = {
           \ , 'sro':'&&&'
           \ , 'kind2scope':{'h':'header'}
           \ , 'sort':0
-          \ , 'ctagsbin':'~/.config/nvim/settings/vwtags.py'
+          \ , 'ctagsbin':'~/.config/nvim/tools/vwtags.py'
           \ , 'ctagsargs': 'markdown'
           \ }
 

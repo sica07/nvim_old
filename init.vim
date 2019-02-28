@@ -114,6 +114,7 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
+Plug 'ludovicchabant/vim-gutentags'
 
 
 " Nyaovim"
