@@ -2,7 +2,7 @@ let g:lightline = {
             \ 'colorscheme': 'material',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ]],
-            \   'right': [ ['neomake','lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+            \   'right': [ ['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]
             \ },
             \ 'component_function': {
             \   'fugitive': 'LightlineFugitive',
@@ -11,8 +11,10 @@ let g:lightline = {
             \   'filetype': 'LightlineFiletype',
             \   'fileencoding': 'LightlineFileencoding',
             \   'mode': 'LightlineMode',
-            \   'neomake' : 'lightline_neomake#component',
             \ },
+            \ 'component_expand' : {
+            \   'neomake' : 'lightline_neomake#component',
+            \  },
             \ 'component_type': {
             \   'neomake': 'error',
             \ },

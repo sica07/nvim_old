@@ -38,7 +38,7 @@ Plug 'jwhitley/vim-matchit'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
 "Relative line numbers
-Plug 'myusuf3/numbers.vim'
+"Plug 'myusuf3/numbers.vim'
 "display indent levels
 Plug 'nathanaelkane/vim-indent-guides'
 "undo list
@@ -108,13 +108,15 @@ Plug 'python-mode/python-mode', {'for': 'python'}
 
 
 " Misc
-Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
 Plug 'vimwiki/vimwiki'
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']}
+
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 
 
 " Nyaovim"
@@ -125,8 +127,10 @@ Plug 'rhysd/nyaovim-markdown-preview'
 
 call plug#end()
 
-" update tags in background whenever you write a php file
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
+" update tags in background whenever you write a php, js and python file
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags_php" ] && .git/hooks/ctags_php' &
+au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags_js" ] && .git/hooks/ctags_js' &
+au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/ctags_py' &
 
 
 
@@ -138,12 +142,12 @@ au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/cta
 """"""""""""""""""""""FROM VIMRC"""""""""""""""""""""
 set nocompatible
 
-
 " ================ General Config ====================
 set nonumber                    " Line numbers 
-set numberwidth=2
+set norelativenumber            " Relative numbers 
+"set numberwidth=1
 set backspace=indent,eol,start  " Allow backspace in insert mode
-set history=100                 " Store 50 lines of command history 
+set history=1000                 " Store 50 lines of command history 
 set showcmd                     " Show incomplete cmds down the bottom
 set showmode                    " Show current mode down the bottom
 set showmatch		                " Cursor shows matching elements ), } 
@@ -155,8 +159,10 @@ set autowriteall                " Automatically write the file when switching bu
 set ruler                       " Show cursor position all the time
 set hidden                      " Allow buffer switching without saving 
 set clipboard=unnamed           " Yank to the default register (*) by default
-set lazyredraw                  " Dont redraw automatically to speed up refresh, especially with relative numbers
+"set lazyredraw                  " Dont redraw automatically to speed up refresh, especially with relative numbers
 syntax on                       " Syntax highligt on
+set exrc
+set secure
 let mapleader=","               " Change the leader to be a comma vs slash
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 
@@ -252,7 +258,8 @@ if has("gui_running")	" GUI color and font settings
 elseif has("termguicolors")
     set termguicolors
     "color atom
-    color base16-github
+    "color base16-github
+    color eclipse
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -263,7 +270,6 @@ else
     "colors base16-material-darker
     color xoria256
 endif
-
 
 " Show tab number (useful for <leader>1, <leader>2.. mapping)
 autocmd VimEnter * set guitablabel=%N:\ %t\ %M

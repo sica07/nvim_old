@@ -1,3 +1,3 @@
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
 

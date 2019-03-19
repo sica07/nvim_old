@@ -1,3 +1,7 @@
 snippet dd "var_dump with die" [b]
 highlight_string("<?php\n" . __FILE__ . ":" . __LINE__ . "\n" . var_export($0, true) . ";\n?>");die();
 endsnippet
+
+snippet Col "Laravel Collection" [A]
+\Illuminate\Database\Eloquent\Collection $0
+endsnippet
