@@ -37,6 +37,9 @@ map <S-l> gt
 "Create new tab
 nnoremap <leader>t :tabnew<CR>
 
+"Edit the init.vim file
+nnoremap <leader>ev :e ~/.config/nvim/init.vim<CR>
+
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
 nmap <silent> <C-q>c :cclose<CR>

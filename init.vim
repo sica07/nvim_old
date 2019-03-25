@@ -132,6 +132,8 @@ au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags_php" ] && .git/hooks
 au BufWritePost *.js silent! !eval '[ -f ".git/hooks/ctags_js" ] && .git/hooks/ctags_js' &
 au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/ctags_py' &
 
+" On save, remove all trailing spaces
+au BufWritePre * :%s/\s\+$//e
 
 
 
@@ -313,6 +315,12 @@ function! StripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
+
+" Re-source ~/.vimrc whenever it is saved
+augroup automaticallySourceVimrc
+  au!
+  au bufwritepost init.vim source ~/.config/nvim/init.vim
+augroup END
 
 " If there isn't one, append a semi colon to the end of the current line.
 function! s:appendSemiColon()
