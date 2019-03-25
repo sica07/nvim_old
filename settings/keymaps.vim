@@ -11,6 +11,11 @@ map <C-H> <C-W>h<C-W>_
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
+
+" insert new line while in normal mode
+noremap zj moo<esc>k`o
+nnoremap zk moO<esc>`o
+
 " Stupid shift key fixes
 if has("user_commands")
   command! -bang -nargs=* -complete=file E e<bang> <args>

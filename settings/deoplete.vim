@@ -4,4 +4,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#camel_case = 1
 let g:deoplete#sources = {}
-let g:deoplete#sources.php = ['omni', 'phpactor', 'ultisnips', 'buffer']
+let g:deoplete#sources.markdown = ['dictionary', 'buffer', 'around']
+let g:deoplete#sources.vimwiki = ['dictionary', 'buffer', 'around']
+let g:deoplete#sources.php = ['omni', 'phpactor', 'ultisnips', 'buffer', 'file']

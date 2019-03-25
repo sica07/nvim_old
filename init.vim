@@ -230,6 +230,9 @@ set wildignore+=*DS_Store*
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+set dictionary=/usr/share/dict/words
+set spelllang=en
+set spell
 
 " ================ Windows ==========================
 set splitright                  " Puts new vsplit windows to the right of the current
@@ -242,7 +245,6 @@ set sidescroll=1
 "Get rid of ugly split borders.
 hi vertsplit guifg=bg guibg=bg
 " ================ GUI =========================
-
 set background=light
 if has("gui_running")	" GUI color and font settings
     set guioptions-=m           " Remove the menubar
