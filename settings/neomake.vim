@@ -21,14 +21,21 @@ call neomake#configure#automake('rw', 1000)
 
     "Add standard argument if one is set.
 "let g:neomake_php_phpcs_args_standard=['--config-set default_standard PSR2', '--report=csv', '-q']
-" Neomake - replacement for sytastic
 "let g:neomake_php_phpcs_extra_args = '--standard=~/phpcs/ruleset.xml'
-let g:neomake_php_enabled_makers = ['php', 'phpmd', 'psalm']
+let g:neomake_php_enabled_makers = ['php', 'psalm', 'phpmd']
 let g:neomake_php_phpmd_maker = {
     \ 'args': ['%t', 'text', '~/Templates/phpmd.xml'],
     \ 'append_file' : 0,
     \ 'errorformat': '%W%f:%l%\s%\s%#%m',
     \ }
+
+    " 'errorformat': '%f:%l: [%t001] %#%m (column %c)',
+let g:neomake_php_psalm_maker = {
+    \ 'args': ['--output-format=pylint'],
+    \ 'errorformat': '%f:%l:%\s[%t0001]%\s%m (column %c)',
+    \ }
+
+
 "let g:neomake_verbose = 3
 "let g:neomake_php_enabled_makers = ['php', 'phpmd']
 
