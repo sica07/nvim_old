@@ -1,5 +1,5 @@
   let g:vimwiki_list = [{'path': '~/pCloudDrive/Apps/vimwiki/',
-                       \ 'syntax': 'markdown', 'ext': '.md', 
+                       \ 'syntax': 'markdown', 'ext': '.md',
                        \ 'auto_tags': 1}]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P
 :inoremap <leader>w@ <C-R>=strftime(" *@created %d-%m-%Y*")<CR>
@@ -9,10 +9,12 @@
 :inoremap <leader>wa <C-R>=strftime("+ [%d/%m/%Y](#%d%m%y)")<CR>
 :nnoremap <leader>wD "=strftime('#### %d/%m/%Y')<CR>P
 :inoremap <leader>wD <C-R>=strftime('#### %d/%m/%Y')<CR>
-:nnoremap <leader>w/ :VimwikiSearchTags 
-:nnoremap <leader>wT :Toc 
+:nnoremap <leader>w/ :VimwikiSearchTags
+:nnoremap <leader>wT :Toc
 
-:nnoremap <leader>mp :MarkdownPreview<CR> 
+:nnoremap <leader>mp :MarkdownPreview<CR>
+let g:mkdp_path_to_chrome='/usr/bin/qutebrowser'
+let g:mkdp_browser = 'chrome'
 
 let g:tagbar_type_vimwiki = {
           \   'ctagstype':'vimwiki'

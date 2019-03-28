@@ -4,9 +4,13 @@ let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
 "let g:neomake_warning_sign = {'text': '⚠', 'texthl': 'NeomakeWarningSign'}
 "let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
 "let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
-let g:neomake_open_list = 2
+"
+"will not open the quickfix list
+let g:neomake_open_list = 0
+let g:neomake_virtualtext_prefix = '➤ '
+"will only place signs
+let g:neomake_highlight_lines=0
 
-let g:neomake_highlight_lines=1
 " When writing a buffer (no delay).
 call neomake#configure#automake('w')
 " When writing a buffer (no delay), and on normal mode changes (after 750ms).
@@ -29,10 +33,9 @@ let g:neomake_php_phpmd_maker = {
     \ 'errorformat': '%W%f:%l%\s%\s%#%m',
     \ }
 
-    " 'errorformat': '%f:%l: [%t001] %#%m (column %c)',
 let g:neomake_php_psalm_maker = {
     \ 'args': ['--output-format=pylint'],
-    \ 'errorformat': '%f:%l:%\s[%t0001]%\s%m (column %c)',
+    \ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
     \ }
 
 
