@@ -33,7 +33,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'vim-scripts/IndexedSearch'
 "display marks
 "Plug 'vim-scripts/ShowMarks'
-"match surroundings 
+"match surroundings
 Plug 'jwhitley/vim-matchit'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
@@ -79,7 +79,9 @@ Plug 'majutsushi/tagbar'
 Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
 ""PHP
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+"Vim Syntax for PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
@@ -101,7 +103,7 @@ Plug 'tpope/vim-haml'
 "Emmmet
 Plug 'mattn/emmet-vim', {'for': ['html','php','phtml']}
 
-" PYTHON 
+" PYTHON
 Plug 'nvie/vim-flake8', {'for': 'python'}
 Plug 'vim-scripts/indentpython.vim', {'for': 'python'}
 Plug 'python-mode/python-mode', {'for': 'python'}
@@ -145,21 +147,21 @@ au BufWritePre * :%s/\s\+$//e
 set nocompatible
 
 " ================ General Config ====================
-set nonumber                    " Line numbers 
-set norelativenumber            " Relative numbers 
+set nonumber                    " Line numbers
+set norelativenumber            " Relative numbers
 "set numberwidth=1
 set backspace=indent,eol,start  " Allow backspace in insert mode
-set history=1000                 " Store 50 lines of command history 
+set history=1000                 " Store 50 lines of command history
 set showcmd                     " Show incomplete cmds down the bottom
 set showmode                    " Show current mode down the bottom
-set showmatch		                " Cursor shows matching elements ), } 
+set showmatch		                " Cursor shows matching elements ), }
 set cursorline                  " Highlight current line
 set gcr=a:blinkon0              " Disable cursor blink
 set visualbell                  " No sounds
 set autoread                    " Reload files changed outside vim
 set autowriteall                " Automatically write the file when switching buffers.
 set ruler                       " Show cursor position all the time
-set hidden                      " Allow buffer switching without saving 
+set hidden                      " Allow buffer switching without saving
 set clipboard=unnamed           " Yank to the default register (*) by default
 "set lazyredraw                  " Dont redraw automatically to speed up refresh, especially with relative numbers
 syntax on                       " Syntax highligt on
@@ -194,7 +196,7 @@ filetype indent on
 
 " Display tabs and trailing spaces visually
 set list
-set listchars=tab:▸\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace 
+set listchars=tab:▸\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -251,7 +253,7 @@ set background=light
 if has("gui_running")	" GUI color and font settings
     set guioptions-=m           " Remove the menubar
     set guioptions-=T           " Remove the toolbar
-    set guioptions-=L           " Remove the left scroll 
+    set guioptions-=L           " Remove the left scroll
     set guioptions-=r           " Remove the right scroll
     set guioptions-=e           " Remove tabs as we will use airline's tabs
 
@@ -263,7 +265,8 @@ elseif has("termguicolors")
     set termguicolors
     "color atom
     "color base16-github
-    color eclipse
+    "color eclipse
+    color base16-one-light
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -331,7 +334,7 @@ function! s:appendSemiColon()
     endif
 endfunction
 
-" Use Q to intelligently close a window 
+" Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
 function! CloseWindowOrKillBuffer()

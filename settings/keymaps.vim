@@ -42,14 +42,14 @@ nnoremap <leader>vim :e ~/.config/nvim/init.vim<CR>
 
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
-nmap <silent> <C-q>c :cclose<CR>
-nmap <silent> <C-q>o :copen<CR>
+nmap <silent> <leader>qc :cclose<CR>
+nmap <silent> <leader>qo :copen<CR>
 "open location list
-nmap <silent> <C-q>l :lopen<CR>
-nmap <silent> <C-q>x :lclose<CR>
+nmap <silent> <leader>lo :lopen<CR>
+nmap <silent> <leader>lc :lclose<CR>
 " Stolen from Steve Losh vimrc: https://bitbucket.org/sjl/dotfiles/src/tip/vim/.vimrc
 " Open a Quickfix window for the last search.
-nnoremap <silent> <C-q>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
+nnoremap <silent> <leader>q/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
 " Zoom in and out of current window with ,gz
 map <silent> <C-o> <C-w>o

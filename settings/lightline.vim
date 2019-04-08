@@ -1,7 +1,7 @@
 let g:lightline = {
             \ 'colorscheme': 'one',
             \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ]],
+            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename' ]],
             \   'right': [ ['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]
             \ },
             \ 'component_function': {
@@ -10,6 +10,7 @@ let g:lightline = {
             \   'fileformat': 'LightlineFileformat',
             \   'filetype': 'LightlineFiletype',
             \   'fileencoding': 'LightlineFileencoding',
+            \   'gitstatus' : 'LightLineGitStatus',
             \   'mode': 'LightlineMode',
             \ },
             \ 'component_expand' : {
@@ -27,6 +28,10 @@ let g:lightline = {
 
 function! LightlineModified()
     return &ft =~ 'help' ? '' : &modified ? '✚' : &modifiable ? '✖' : '⊜'
+endfunction
+
+function! LightLineGitStatus()
+  return join(filter(map(['A','M','D'], {i,v -> v.': '.GitGutterGetHunkSummary()[i]}), 'v:val[-1:]'), ' ')
 endfunction
 
 function! LightlineReadonly()
