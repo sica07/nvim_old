@@ -6,7 +6,7 @@ let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
 "let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 "
 "will not open the quickfix list
-let g:neomake_open_list = 
+let g:neomake_open_list = 0
 let g:neomake_virtualtext_prefix = '➤ '
 "will only place signs
 let g:neomake_highlight_lines=0

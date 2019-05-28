@@ -8,7 +8,19 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-"tree explorer
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-ultisnips'
+"Plug 'yuki-ycino/ncm2-dictionary'
+"Plug 'ncm2/ncm2-cssomni'
+ "tree explorer
 Plug 'scrooloose/nerdtree'
 "nerdtree open in all tabs
 Plug 'jistr/vim-nerdtree-tabs'
@@ -46,14 +58,13 @@ Plug 'sjl/gundo.vim'
 "distraction-free writeing
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-"vs like incons
-Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/calendar-vim'
 ""GIT
 "a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 "git diff in the gutter
 Plug 'airblade/vim-gitgutter'
+Plug 'juneedahamed/vc.vim'
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -68,8 +79,7 @@ Plug 'godlygeek/tabular'
 "check the editorconfig file specifications
 Plug 'editorconfig/editorconfig-vim'
 "autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
-Plug 'kristijanhusak/deoplete-phpactor'
+"Plug 'kristijanhusak/deoplete-phpactor'
 "linting
 Plug 'neomake/neomake'
 Plug 'mkalinski/vim-lightline_neomake'
@@ -78,7 +88,13 @@ Plug 'majutsushi/tagbar'
 "snippets"
 Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
 ""PHP
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+"Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+"Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 "Vim Syntax for PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
@@ -126,6 +142,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'rhysd/nyaovim-popup-tooltip'
 Plug 'rhysd/nyaovim-markdown-preview'
 
+"vs like incons (special icons should be loaded last)
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -148,7 +166,7 @@ set nocompatible
 
 " ================ General Config ====================
 set nonumber                    " Line numbers
-set norelativenumber            " Relative numbers
+set relativenumber              " Relative numbers
 "set numberwidth=1
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set history=1000                 " Store 50 lines of command history
@@ -196,21 +214,18 @@ filetype indent on
 
 " Display tabs and trailing spaces visually
 set list
-set listchars=tab:▸\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
+"set listchars=tab:▸\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
+set listchars=tab:-\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
-" For programming languages using a semi colon at the end of statement.
-autocmd FileType c,cpp,css,java,javascript,perl,php,jade inoremap <silent> ;; :call appendSemiColon()<CR>
-autocmd FileType c,cpp,css,java,javascript,perl,php,jade inoremap <silent> ;; <ESC>:call <SID>appendSemiColon()<CR>
-
-
 
 " ================ Folds ============================
 
+set nofoldenable "disable folding when opening the file
 set foldmethod=marker
-set foldmarker={,}
+set foldmarker=<,>
 set foldnestmax=3       " Deepest fold is 3 levels
 set foldlevelstart=0
 " Which commands trigger auto-unfold
@@ -266,23 +281,25 @@ elseif has("termguicolors")
     "color atom
     "color base16-github
     "color eclipse
-    color base16-one-light
+    "color base16-one-light
+    color twilight
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-else
-    set t_Co=256                " 256 color mode
+elseif &term =~ '256color'
+    "set t_Co=256                " 256 color mode
     ""let g:onedark_termcolors=256
     ""colorscheme base16-onedark
     "colors base16-material-darker
-    color xoria256
+    "color xoria256
+    set t_tu=
 endif
 
 " Show tab number (useful for <leader>1, <leader>2.. mapping)
 autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
 " Always switch to the current file directory
-" (commented because CtrlP will search just in the current folder if active)
+" (caveat: CtrlP will search just in the current folder if active)
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 "Git commit line should not be longer than  72 chars"

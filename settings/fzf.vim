@@ -29,6 +29,6 @@ nnoremap <silent> <c-c> :Commands<cr>
 "search with Rg
 nnoremap <silent> <c-r> :Rg<CR>
 "search lines in Buffer
-nnoremap <silent> <c-i> :Lines<CR>
+"nnoremap <silent> <c-i> :Lines<CR>
 "search lines in Buffer
 nnoremap <silent> <c-g> :Commits!<CR>

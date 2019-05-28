@@ -52,7 +52,7 @@ nmap <silent> <leader>lc :lclose<CR>
 nnoremap <silent> <leader>q/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
 " Zoom in and out of current window with ,gz
-map <silent> <C-o> <C-w>o
+"map <silent> <C-o> <C-w>o
 " Use numbers to pick the tab you want (like iTerm)
 nnoremap <leader>1 :tabn 1<cr>
 nnoremap <leader>2 :tabn 2<cr>
