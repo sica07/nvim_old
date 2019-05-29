@@ -23,7 +23,7 @@ nnoremap <silent> <c-e> :FZFMru<CR>
 "search most recent used
 nnoremap <silent> <c-u> :Buffers<CR>
 "search keymaps
-nnoremap <silent> <c-m> :Maps<cr>
+"nnoremap <silent> <c-m> :Maps<cr>
 "search commands
 nnoremap <silent> <c-c> :Commands<cr>
 "search with Rg
