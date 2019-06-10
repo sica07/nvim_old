@@ -26,17 +26,17 @@ call neomake#configure#automake('rw', 1000)
     "Add standard argument if one is set.
 "let g:neomake_php_phpcs_args_standard=['--config-set default_standard PSR2', '--report=csv', '-q']
 "let g:neomake_php_phpcs_extra_args = '--standard=~/phpcs/ruleset.xml'
-let g:neomake_php_enabled_makers = ['php', 'psalm', 'phpmd']
-let g:neomake_php_phpmd_maker = {
-    \ 'args': ['%t', 'text', '~/Templates/phpmd.xml'],
-    \ 'append_file' : 0,
-    \ 'errorformat': '%W%f:%l%\s%\s%#%m',
-    \ }
+let g:neomake_php_enabled_makers = ['php']
+"let g:neomake_php_phpmd_maker = {
+    "\ 'args': ['%t', 'text', '~/Templates/phpmd.xml'],
+    "\ 'append_file' : 0,
+    "\ 'errorformat': '%W%f:%l%\s%\s%#%m',
+    "\ }
 
-let g:neomake_php_psalm_maker = {
-    \ 'args': ['--output-format=pylint'],
-    \ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
-    \ }
+"let g:neomake_php_psalm_maker = {
+    "\ 'args': ['--output-format=pylint'],
+    "\ 'errorformat': '%A%f:%l:%\s[%t%n]%\s%m',
+    "\ }
 
 
 "let g:neomake_verbose = 3

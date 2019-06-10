@@ -12,22 +12,22 @@ let g:rg_command = '
 set rtp+=~/.fzf
 
 " search for visual selection
-vnoremap <leader>f "hy:exec "Rg ".escape('<C-R>h', "/\.*$^~[()")<cr>
+"vnoremap <leader>f "hy:exec "Rg ".escape('<C-R>h', "/\.*$^~[()")<cr>
 
 "search files
-nnoremap <silent> <c-p> :FZF<CR>
+"nnoremap <silent> <c-p> :FZF<CR>
 "search buffers
-nnoremap <silent> <c-n> :BTags<cr>
+"nnoremap <silent> <c-n> :BTags<cr>
 "search most recent used
 nnoremap <silent> <c-e> :FZFMru<CR>
 "search most recent used
-nnoremap <silent> <c-u> :Buffers<CR>
+"nnoremap <silent> <c-u> :Buffers<CR>
 "search keymaps
 "nnoremap <silent> <c-m> :Maps<cr>
 "search commands
-nnoremap <silent> <c-c> :Commands<cr>
+"nnoremap <silent> <c-c> :Commands<cr>
 "search with Rg
-nnoremap <silent> <c-r> :Rg<CR>
+"nnoremap <silent> <c-r> :Rg<CR>
 "search lines in Buffer
 "nnoremap <silent> <c-i> :Lines<CR>
 "search lines in Buffer

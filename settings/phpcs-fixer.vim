@@ -1,9 +1,9 @@
 " If php-cs-fixer is in $PATH, you don't need to define line below
 let g:php_cs_fixer_path = "~/.config/composer/vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
-let g:php_cs_fixer_level = "psr2"              " which level ?
+let g:php_cs_fixer_rules = "@Symfony"              " which level ?
 "let g:php_cs_fixer_config = "default"             " configuration
-let g:php_cs_fixer_config = "magento"             " configuration
-"let g:php_cs_fixer_config_file = '.php_cs'       " configuration file
+"let g:php_cs_fixer_config = "magento"             " configuration
+"let g:php_cs_fixer_config_file = '~/Templates/.php_cs'       " configuration file
 let g:php_cs_fixer_php_path = "php"               " Path to PHP
 " If you want to define specific fixers:
 "let g:php_cs_fixer_fixers_list = "linefeed,short_tag,indentation"

@@ -1,8 +1,8 @@
 let g:lightline = {
             \ 'colorscheme': 'PaperColor_dark',
             \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename' ]],
-            \   'right': [ ['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]
+            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename','method' ]],
+            \   'right': [ ['cocstatus'],['currentfunction'],['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]
             \ },
             \ 'component_function': {
             \   'fugitive': 'LightlineFugitive',
@@ -12,6 +12,7 @@ let g:lightline = {
             \   'fileencoding': 'LightlineFileencoding',
             \   'gitstatus' : 'LightLineGitStatus',
             \   'mode': 'LightlineMode',
+            \   'method': 'NearestMethodOrFunction',
             \ },
             \ 'component_expand' : {
             \   'neomake' : 'lightline_neomake#component',

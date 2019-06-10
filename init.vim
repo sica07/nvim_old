@@ -9,15 +9,17 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
 
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-bufword'
 "Plug 'ncm2/ncm2-path'
 "Plug 'phpactor/ncm2-phpactor'
-Plug 'ncm2/ncm2-ultisnips'
+"Plug 'ncm2/ncm2-ultisnips'
 "Plug 'yuki-ycino/ncm2-dictionary'
 "Plug 'ncm2/ncm2-cssomni'
  "tree explorer
@@ -84,7 +86,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'neomake/neomake'
 Plug 'mkalinski/vim-lightline_neomake'
 "tabgar"
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim'
 "snippets"
 Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
 ""PHP
@@ -94,7 +97,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
+"Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 "Vim Syntax for PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
@@ -264,7 +267,7 @@ set sidescroll=1
 "Get rid of ugly split borders.
 hi vertsplit guifg=bg guibg=bg
 " ================ GUI =========================
-set background=light
+set background=dark
 if has("gui_running")	" GUI color and font settings
     set guioptions-=m           " Remove the menubar
     set guioptions-=T           " Remove the toolbar
@@ -282,7 +285,8 @@ elseif has("termguicolors")
     "color base16-github
     "color eclipse
     "color base16-one-light
-    color twilight
+    "color twilight
+    color gruvbox
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
