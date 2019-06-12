@@ -1,9 +1,9 @@
 " neomake settings
 autocmd BufWritePost * Neomake
-let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
-"let g:neomake_warning_sign = {'text': '⚠', 'texthl': 'NeomakeWarningSign'}
-"let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-"let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_error_sign   = {'text': '☠', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '⚠', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 "
 "will not open the quickfix list
 let g:neomake_open_list = 0
@@ -26,7 +26,7 @@ call neomake#configure#automake('rw', 1000)
     "Add standard argument if one is set.
 "let g:neomake_php_phpcs_args_standard=['--config-set default_standard PSR2', '--report=csv', '-q']
 "let g:neomake_php_phpcs_extra_args = '--standard=~/phpcs/ruleset.xml'
-let g:neomake_php_enabled_makers = ['php']
+let g:neomake_php_enabled_makers = ['php', 'psalm']
 "let g:neomake_php_phpmd_maker = {
     "\ 'args': ['%t', 'text', '~/Templates/phpmd.xml'],
     "\ 'append_file' : 0,

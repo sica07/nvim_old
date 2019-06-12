@@ -7,11 +7,6 @@
             "initializationOptions": {
                 "storagePath": "/tmp/intelephense"
             }
-        },
-        "psalm": {
-            "command": "psalm-language-server",
-            "args": ["--find-dead-code"],
-            "filetypes": ["php"]
         }
     },
 "coc.preferences.colorSupport": true

@@ -9,8 +9,11 @@ nnoremap <leader>c :CocList<cr>
 "search files
 nnoremap <silent> <c-p> :CocList files<CR>
 
-"search buffers
-nnoremap <silent> <c-n> :CocList tags<cr>
+"search symbols
+nnoremap <silent> <c-n> :CocList symbols<cr>
+
+"search quickfix window
+nnoremap <silent> <c-q> :CocList quickfix<cr>
 
 "search most recent used
 "nnoremap <silent> <c-e> :CocList mru<CR>
