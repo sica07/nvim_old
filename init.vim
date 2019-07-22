@@ -230,7 +230,7 @@ set nofoldenable "disable folding when opening the file
 set foldmethod=marker
 set foldmarker=<,>
 set foldnestmax=3       " Deepest fold is 3 levels
-set foldlevelstart=0
+set foldlevelstart=1
 " Which commands trigger auto-unfold
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 

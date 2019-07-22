@@ -10,15 +10,27 @@ nnoremap <leader>c :CocList<cr>
 nnoremap <silent> <c-p> :CocList files<CR>
 
 "search symbols
-nnoremap <silent> <c-n> :CocList symbols<cr>
+nnoremap <silent> <c-s> :CocList symbols<cr>
+
+"search outline of current file
+nnoremap <silent> <c-n> :CocList outline<cr>
 
 "search quickfix window
 nnoremap <silent> <c-q> :CocList quickfix<cr>
 
+"search locationlist window
+nnoremap <silent> <c-o> :CocList locationlist<cr>
+
+"search symbols
+nnoremap <silent> <c-d> :CocList diagnostics<cr>
+
+"search marks
+nnoremap <silent> <c-m> :CocList marks<cr>
+
 "search most recent used
 "nnoremap <silent> <c-e> :CocList mru<CR>
 
-"search most recent used
+"search buffers
 nnoremap <silent> <c-u> :CocList buffers<CR>
 
 "search with Rg

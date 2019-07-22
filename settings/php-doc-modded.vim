@@ -1,4 +1,4 @@
-let g:pdv_cfg_Author = "Marius Matei <nongeekboy@gmail.com>" 
+let g:pdv_cfg_Author = "Marius Matei <nongeekboy@gmail.com>"
 let g:pdv_cfg_Copyright = strftime('%Y')
 
 " Options
@@ -29,3 +29,7 @@ let g:pdv_cfg_annotation_Version = 0
 let g:pdv_cfg_annotation_Author = 0
 let g:pdv_cfg_annotation_Copyright = 0
 let g:pdv_cfg_annotation_License = 0
+
+inoremap <leader>pd <ESC>:call PhpDocSingle()<CR>i
+nnoremap <leader>pd :call PhpDocSingle()<CR>
+vnoremap <leader>pd :call PhpDocRange()<CR>
