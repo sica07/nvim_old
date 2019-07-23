@@ -100,7 +100,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 "Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 "Vim Syntax for PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
+"Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
+Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
@@ -157,6 +158,7 @@ au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/c
 
 " On save, remove all trailing spaces
 au BufWritePre * :%s/\s\+$//e
+
 
 
 
@@ -229,10 +231,13 @@ set linebreak    "Wrap lines at convenient points
 set nofoldenable "disable folding when opening the file
 set foldmethod=marker
 set foldmarker=<,>
-set foldnestmax=3       " Deepest fold is 3 levels
+set foldnestmax=4       " Deepest fold is 4 levels
 set foldlevelstart=1
 " Which commands trigger auto-unfold
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+au BufWritePost :%foldopen
+
+
 
 " ================ Search and Completion  ===========
 set incsearch                   " Find as you type search
