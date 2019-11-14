@@ -99,8 +99,26 @@ map zh zH
 " Avoid accidental hits of <F1> while aiming for <Esc>
 noremap! <F1> <Esc>
 
-" Quickly close the current window
-nnoremap qq :q<CR>
+" Use Q to intelligently close a window
+" (if there are multiple windows into the same buffer)
+" or kill the buffer entirely if it's the last window looking into that buffer
+function! CloseWindowOrKillBuffer()
+    let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+
+    " We should never bdelete a nerd tree
+    if matchstr(expand("%"), 'NERD') == 'NERD'
+        wincmd c
+        return
+    endif
+
+    if number_of_windows_to_this_buffer > 1
+        wincmd c
+    else
+        bdelete
+    endif
+endfunction
+
+nnoremap qq :call CloseWindowOrKillBuffer()<CR>
 
 " Quickly save
 nnoremap ,w :w<CR>
@@ -113,6 +131,42 @@ nnoremap ` '
 
 " Keep search matches in the middle of the window and pulse the line when moving
 " to them.
+function! PulseCursorLine()
+    let current_window = winnr()
+
+    windo set nocursorline
+    execute current_window . 'wincmd w'
+
+    setlocal cursorline
+
+    redir => old_hi
+    silent execute 'hi CursorLine'
+    redir END
+    let old_hi = split(old_hi, '\n')[0]
+    let old_hi = substitute(old_hi, 'xxx', '', '')
+
+    hi CursorLine guibg=#3a3a3a
+    redraw
+    sleep 20m
+
+    hi CursorLine guibg=#4a4a4a
+    redraw
+    sleep 30m
+
+    hi CursorLine guibg=#3a3a3a
+    redraw
+    sleep 30m
+
+    hi CursorLine guibg=#2a2a2a
+    redraw
+    sleep 20m
+
+    execute 'hi ' . old_hi
+
+    windo set cursorline
+    execute current_window . 'wincmd w'
+endfunction
+
 nnoremap n n:call PulseCursorLine()<cr>
 nnoremap N N:call PulseCursorLine()<cr>
 
@@ -123,11 +177,6 @@ inoremap jj <Esc>
 " Jump to matching pairs easily, with Tab
 "nnoremap <Tab> %
 ""vnoremap <Tab> %
-
-" Use Q to intelligently close a window
-" (if there are multiple windows into the same buffer)
-" or kill the buffer entirely if it's the last window looking into that buffer
-nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " Stop that stupid ex mode
 nnoremap Q <nop>
@@ -145,4 +194,3 @@ nmap :ed :edit %:p:h/
 
 " Write readonly file
 cnoremap w!! w !sudo tee > /dev/null %
-

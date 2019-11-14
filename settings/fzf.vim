@@ -15,7 +15,7 @@ set rtp+=~/.fzf
 "vnoremap <leader>f "hy:exec "Rg ".escape('<C-R>h', "/\.*$^~[()")<cr>
 
 "search files
-"nnoremap <silent> <c-p> :FZF<CR>
+nnoremap <silent> <c-p> :FZF<CR>
 "search buffers
 "nnoremap <silent> <c-n> :BTags<cr>
 "search most recent used

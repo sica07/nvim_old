@@ -12,7 +12,13 @@ let g:startify_use_env = 1
 let g:startify_custom_header =""
 "let g:startify_custom_header =
       "\ 'map(g:ascii + startify#fortune#boxed(), "\"   \".v:val")'
-let g:startify_bookmarks = [{'fsp':'~/Templates/FSPlaza.laravel'},{'api':'~/Templates/api'},{'mpbv':'~/Templates/mpbv'},{'sandbox':'~/Templates/sandbox'},{'centrale':'~/Templates/centrale-des-marches/website'}]
+let g:startify_bookmarks = [
+            \ {'fsp':'~/Templates/FSPlaza.laravel'},
+            \ {'qf':'~/Templates/quickfeedback.qf-admin'},
+            \ {'mpbv':'~/Templates/mpbv'},
+            \ {'dailyroads':'~/Templates/dailyroads'},
+            \ {'sandbox':'~/Templates/sandbox'}
+            \ ]
 
 function! s:list_commits()
     let git = 'git -C ' .getcwd()

@@ -32,7 +32,8 @@ function! LightlineModified()
 endfunction
 
 function! LightLineGitStatus()
-  return join(filter(map(['A','M','D'], {i,v -> v.': '.GitGutterGetHunkSummary()[i]}), 'v:val[-1:]'), ' ')
+  "return join(filter(map(['A','M','D'], {i,v -> v.': '.GitGutterGetHunkSummary()[i]}), 'v:val[-1:]'), ' ')
+  return ''
 endfunction
 
 function! LightlineReadonly()

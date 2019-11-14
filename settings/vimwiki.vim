@@ -1,4 +1,4 @@
-  let g:vimwiki_list = [{'path': '~/pCloudDrive/Apps/vimwiki/',
+  let g:vimwiki_list = [{'path': '~/Dropbox/Apps/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md',
                        \ 'auto_tags': 1}]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P

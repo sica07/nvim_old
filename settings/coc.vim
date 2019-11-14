@@ -7,7 +7,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 nnoremap <leader>c :CocList<cr>
 
 "search files
-nnoremap <silent> <c-p> :CocList files<CR>
+"nnoremap <silent> <c-p> :CocList files<CR>
 
 "search symbols
 nnoremap <silent> <c-s> :CocList symbols<cr>
