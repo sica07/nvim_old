@@ -1,13 +1,25 @@
 {
- "languageserver": {
-        "intelephense": {
-            "command": "intelephense",
-            "args": ["--stdio"],
-            "filetypes": ["php"],
-            "initializationOptions": {
-                "storagePath": "/tmp/intelephense"
-            }
+    "languageserver": {
+        "elmLS": {
+          "command": "~/.nvm/versions/node/v8.16.2/bin/elm-language-server",
+          "args": ["--stdio"],
+          "filetypes": ["elm"],
+          "rootPatterns": ["elm.json"],
+          "trace.server": "verbose",
+          "initializationOptions": {
+            "runtime": "node",
+            "elmPath": "elm",
+            "elmAnalyseTrigger": "change",
+            "elmFormatPath": "elm-format",
+            "elmTestPath": "elm-test"
+          }
         }
     },
-"coc.preferences.colorSupport": true
+    "snippets.ultisnips.directories": [
+        "UltiSnips"
+    ],
+    "coc.preferences.colorSupport": true,
+    "coc.preferences.formatONSaveFileTypes": ["elm"],
+    "python.jediPath":"~/.local/lib/python3.5/site-packages/jedi",
+    "codeLens.enable": true
 }

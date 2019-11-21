@@ -1,9 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/marius/.config/nvim'
-let g:netrw_dirhist_2='/home/marius/.config/nvim/settings'
-let g:netrw_dirhist_3='/home/marius/Templates/centrale-des-marches/website/apps/backend/config'
-let g:netrw_dirhist_4='/home/marius/Templates/centrale-des-marches/website/apps/backend/lib'
-let g:netrw_dirhist_5='/home/marius/Templates/centrale-des-marches/website/apps/backend/config'
-let g:netrw_dirhist_6='/home/marius/Templates/centrale-des-marches/website/apps/backend/lib'
-let g:netrw_dirhist_7='/home/marius/Templates/centrale-des-marches/website/apps/backend/config'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/marius/Templates/quickfeedback.qf-admin'
+let g:netrw_dirhist_2='/home/marius/Templates'
+let g:netrw_dirhist_3='/home/marius'
+let g:netrw_dirhist_4='/home/marius/Templates/quickfeedback.qf-admin/resources'
+let g:netrw_dirhist_5='/home/marius/Templates/quickfeedback.qf-admin/resources/views'
+let g:netrw_dirhist_6='/home/marius/Templates/quickfeedback.qf-admin/resources/views/vendor'

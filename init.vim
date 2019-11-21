@@ -11,8 +11,17 @@ call plug#begin('~/.config/nvim/plugged')
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
 "Plug 'ncm2/ncm2'
 "Plug 'roxma/nvim-yarp'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
@@ -25,7 +34,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
  "tree explorer
 Plug 'scrooloose/nerdtree'
 "nerdtree open in all tabs
-Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'jistr/vim-nerdtree-tabs'
 "Homepage"
 Plug 'mhinz/vim-startify'
 "Change to project root"
@@ -33,6 +42,7 @@ Plug 'airblade/vim-rooter'
 "collections of colorschemes
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'gosukiwi/vim-atom-dark'
+Plug 'tek256/simple-dark'
 Plug 'spf13/vim-colors'
 Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
@@ -48,9 +58,9 @@ Plug 'vim-scripts/IndexedSearch'
 "display marks
 "Plug 'vim-scripts/ShowMarks'
 "match surroundings
-Plug 'jwhitley/vim-matchit'
+Plug 'andymass/vim-matchup'
 "statusbar on steroids
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 "Relative line numbers
 "Plug 'myusuf3/numbers.vim'
 "display indent levels
@@ -65,41 +75,44 @@ Plug 'mattn/calendar-vim'
 "a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 "git diff in the gutter
-Plug 'airblade/vim-gitgutter'
-Plug 'juneedahamed/vc.vim'
+"Plug 'airblade/vim-gitgutter'
+"VCS support
+"Plug 'juneedahamed/vc.vim'
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 
 ""PROGRAMMING
-
+"syntax hilghlight
+Plug 'sheerun/vim-polyglot'
 "code commenting
 Plug 'scrooloose/nerdcommenter'
 "best text alignment and filtering
 Plug 'godlygeek/tabular'
 "check the editorconfig file specifications
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
 "autocompletion
 "Plug 'kristijanhusak/deoplete-phpactor'
 "linting
 Plug 'neomake/neomake'
-Plug 'mkalinski/vim-lightline_neomake'
+"Plug 'mkalinski/vim-lightline_neomake'
 "tabgar"
 "Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim'
 "snippets"
-Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
+"Plug 'SirVer/ultisnips'
+Plug 'phux/vim-snippets'
 ""PHP
 "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 "Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+""Plug 'autozimu/LanguageClient-neovim', {
+""    \ 'branch': 'next',
+""    \ 'do': 'bash install.sh',
+""    \ }
 "Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-"Vim Syntax for PHP
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
+"Vim Syntax for PHP (included in polyglot)
+"Plug 'StanAngeloff/php.vim', {'for': 'php'}
 "Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
@@ -109,31 +122,30 @@ Plug 'alvan/vim-php-manual', {'for': 'php'}
 Plug 'Rican7/php-doc-modded', {'for': 'php'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'vim-vdebug/vdebug', {'for': 'php'}
-""JS
-Plug 'elzr/vim-json'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
+""JS (included in polyglot)
+"Plug 'elzr/vim-json'
+"Plug 'pangloss/vim-javascript'
+"Plug 'posva/vim-vue'
 " HTML
 "autoclose html tags
-Plug 'vim-scripts/HTML-AutoCloseTag'
-"support for css3 syntax
-Plug 'hail2u/vim-css3-syntax'
-"support for haml,sass and scss syntax
-Plug 'tpope/vim-haml'
+Plug 'vim-scripts/HTML-AutoCloseTag', {'for': ['html', 'blade']}
+"support for css3 syntax (included in polyglot)
+"Plug 'hail2u/vim-css3-syntax'
+"support for haml,sass and scss syntax (included in polyglot)
+"Plug 'tpope/vim-haml'
 "Emmmet
-Plug 'mattn/emmet-vim', {'for': ['html','php','phtml']}
+Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
 
 " PYTHON
-Plug 'nvie/vim-flake8', {'for': 'python'}
-Plug 'vim-scripts/indentpython.vim', {'for': 'python'}
-Plug 'python-mode/python-mode', {'for': 'python'}
+"Plug 'nvie/vim-flake8', {'for': 'python'}
+"Plug 'vim-scripts/indentpython.vim', {'for': 'python'} (polyglot)
+"Plug 'python-mode/python-mode', {'for': 'python'}
 
 
 " Misc
 Plug 'vimwiki/vimwiki'
 Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']}
+"Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']} (polyglot)
 
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
@@ -143,8 +155,8 @@ Plug 'wakatime/vim-wakatime'
 
 " Nyaovim"
 
-Plug 'rhysd/nyaovim-popup-tooltip'
-Plug 'rhysd/nyaovim-markdown-preview'
+"Plug 'rhysd/nyaovim-popup-tooltip'
+"Plug 'rhysd/nyaovim-markdown-preview'
 
 "vs like incons (special icons should be loaded last)
 Plug 'ryanoasis/vim-devicons'
@@ -158,6 +170,10 @@ au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/c
 
 " On save, remove all trailing spaces
 au BufWritePre * :%s/\s\+$//e
+
+" Set empty buffers/new files type to markdown
+au FileType vimwiki,markdown :color pyte
+au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
 
 
 
@@ -212,7 +228,7 @@ set linespace=10                 " No extra spaces between rows
 set ffs=unix,dos,mac            " Try recognizing dos, unix, and mac line endings.
 
 " Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml,json,markdown autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 filetype plugin on
 filetype indent on
@@ -291,10 +307,14 @@ elseif has("termguicolors")
     "color eclipse
     "color base16-one-light
     "color twilight
-    color gruvbox
+    "color gruvbox
+    "color darkburn
+    color darktango
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    "status line: 0: never 1: only if there are at least two windows 2: always
+    set laststatus=0
 elseif &term =~ '256color'
     "set t_Co=256                " 256 color mode
     ""let g:onedark_termcolors=256
@@ -351,73 +371,7 @@ augroup automaticallySourceVimrc
   au bufwritepost init.vim source ~/.config/nvim/init.vim
 augroup END
 
-" If there isn't one, append a semi colon to the end of the current line.
-function! s:appendSemiColon()
-    if getline('.') !~ ';$'
-        let original_cursor_position = getpos('.')
-        exec("s/$/;/")
-        call setpos('.', original_cursor_position)
-    endif
-endfunction
-
-" Use Q to intelligently close a window
-" (if there are multiple windows into the same buffer)
-" or kill the buffer entirely if it's the last window looking into that buffer
-function! CloseWindowOrKillBuffer()
-    let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
-
-    " We should never bdelete a nerd tree
-    if matchstr(expand("%"), 'NERD') == 'NERD'
-        wincmd c
-        return
-    endif
-
-    if number_of_windows_to_this_buffer > 1
-        wincmd c
-    else
-        bdelete
-    endif
-endfunction
-
-
-" Keep search matches in the middle of the window and pulse the line when moving
-" to them.
-function! PulseCursorLine()
-    let current_window = winnr()
-
-    windo set nocursorline
-    execute current_window . 'wincmd w'
-
-    setlocal cursorline
-
-    redir => old_hi
-    silent execute 'hi CursorLine'
-    redir END
-    let old_hi = split(old_hi, '\n')[0]
-    let old_hi = substitute(old_hi, 'xxx', '', '')
-
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 20m
-
-    hi CursorLine guibg=#4a4a4a
-    redraw
-    sleep 30m
-
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 30m
-
-    hi CursorLine guibg=#2a2a2a
-    redraw
-    sleep 20m
-
-    execute 'hi ' . old_hi
-
-    windo set cursorline
-    execute current_window . 'wincmd w'
-endfunction
-
 for fpath in split(globpath('~/.config/nvim/settings', '*.vim'), '\n')
     exe 'source' fpath
 endfor
+
