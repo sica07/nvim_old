@@ -19,7 +19,7 @@
         "UltiSnips"
     ],
     "coc.preferences.colorSupport": true,
-    "coc.preferences.formatONSaveFileTypes": ["elm"],
+    "coc.preferences.formatOnSaveFiletypes": ["elm"],
     "python.jediPath":"~/.local/lib/python3.5/site-packages/jedi",
     "codeLens.enable": true
 }

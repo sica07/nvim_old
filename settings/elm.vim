@@ -1,5 +1,5 @@
 
-au FileType elm nmap <leader>k <Plug>(elm-show-docs)
+"au FileType elm nmap <leader>k <Plug>(elm-show-docs)
 
 let g:elm_jump_to_error = 0
 let g:elm_make_output_file = "elm.js"

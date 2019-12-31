@@ -45,6 +45,8 @@ nnoremap <silent> <c-t> :CocList tags<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> g] <Plug>(coc-diagnostics-next)
+nmap <silent> g[ <Plug>(coc-diagnostics-prev)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> S <Plug>(coc-fix-current)
