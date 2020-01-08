@@ -212,7 +212,9 @@ set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatib
 
 " ================ Turn Off Swap Files ==============
 
-set noswapfile
+"set noswapfile
+"swap files directory
+set directory^=$HOME/.vim/tmp//
 set nobackup
 set nowb
 
