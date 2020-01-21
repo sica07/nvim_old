@@ -1,6 +1,8 @@
   let g:vimwiki_list = [{'path': '~/Dropbox/Apps/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md',
-                       \ 'auto_tags': 1}]
+                       \ 'auto_tags': 1,
+                       \ 'auto_diary_index': 1
+                      }]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P
 :inoremap <leader>w@ <C-R>=strftime(" *@created %d-%m-%Y*")<CR>
 :nnoremap <leader>wx "=strftime(" ^@closed %d-%m-%Y^")<CR>P
@@ -16,6 +18,7 @@
 let g:mkdp_path_to_chrome='/usr/bin/surf'
 let g:mkdp_browser = 'chrome'
 
+let g:vimwiki_listsyms = '✗○◐●✓'
 let g:tagbar_type_vimwiki = {
           \   'ctagstype':'vimwiki'
           \ , 'kinds':['h:header']
