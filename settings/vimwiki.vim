@@ -1,10 +1,16 @@
   let g:vimwiki_list = [{'path': '~/Dropbox/Apps/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md',
                        \ 'auto_tags': 1,
-                       \ 'auto_diary_index': 1
-                      }]
+                       \ 'auto_diary_index': 1,
+                       \},
+                       \{'path': '~/Dropbox/Apps/vimwiki/zettelkasten',
+                       \ 'syntax': 'markdown', 'ext': '.md',
+                       \ 'auto_tags': 1
+                       \}]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P
 :inoremap <leader>w@ <C-R>=strftime(" *@created %d-%m-%Y*")<CR>
+:nnoremap <leader>wu "=strftime(" %Y%m%d%H%M%S ")<CR>P
+:inoremap <leader>wu <C-R>=strftime(" %Y%m%d%H%M%S ")<CR>
 :nnoremap <leader>wx "=strftime(" ^@closed %d-%m-%Y^")<CR>P
 :inoremap <leader>wx <C-R>=strftime("^@closed %d-%m-%Y^")<CR>
 :nnoremap <leader>wa "=strftime("+ [%d/%m/%Y](#%d%m%y)")<CR>P

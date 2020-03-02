@@ -146,6 +146,7 @@ Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
 " Misc
 Plug 'vimwiki/vimwiki'
 Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
+Plug 'freitass/todo.txt-vim'
 "Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']} (polyglot)
 
 "preview in browser html, md, rdoc, textile, etc files
@@ -208,6 +209,7 @@ syntax on                       " Syntax highligt on
 set exrc
 set secure
 let mapleader=","               " Change the leader to be a comma vs slash
+let maplocalleader=","               " Change the leader to be a comma vs slash
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 
 " ================ Turn Off Swap Files ==============
