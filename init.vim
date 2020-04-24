@@ -61,7 +61,9 @@ Plug 'vim-scripts/IndexedSearch'
 "match surroundings
 Plug 'andymass/vim-matchup'
 "statusbar on steroids
-"Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
+"Automatically save sessions
+Plug 'tpope/vim-obsession'
 "Relative line numbers
 "Plug 'myusuf3/numbers.vim'
 "display indent levels
@@ -81,7 +83,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'juneedahamed/vc.vim'
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 
 ""PROGRAMMING
@@ -97,7 +99,7 @@ Plug 'godlygeek/tabular'
 "Plug 'kristijanhusak/deoplete-phpactor'
 "linting
 Plug 'neomake/neomake'
-"Plug 'mkalinski/vim-lightline_neomake'
+Plug 'mkalinski/vim-lightline_neomake'
 "tabgar"
 "Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim'
@@ -174,7 +176,7 @@ au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/c
 au BufWritePre * :%s/\s\+$//e
 
 " Set empty buffers/new files type to markdown
-au FileType vimwiki,markdown :color pyte
+au FileType vimwiki,markdown :color base16-one-light
 au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
 
 
@@ -315,12 +317,13 @@ elseif has("termguicolors")
     "color gruvbox
     "color darkburn
     "color darktango
-    color base16-material
+    ""color base16-material
+    color grayscale-dark
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     "status line: 0: never 1: only if there are at least two windows 2: always
-    set laststatus=0
+    set laststatus=2
 elseif &term =~ '256color'
     "set t_Co=256                " 256 color mode
     ""let g:onedark_termcolors=256

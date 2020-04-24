@@ -1,7 +1,7 @@
 let g:lightline = {
             \ 'colorscheme': 'PaperColor_dark',
             \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename','method' ]],
+            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename','method' ],['obsession']],
             \   'right': [ ['cocstatus'],['currentfunction'],['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]
             \ },
             \ 'component_function': {
@@ -13,6 +13,7 @@ let g:lightline = {
             \   'gitstatus' : 'LightLineGitStatus',
             \   'mode': 'LightlineMode',
             \   'method': 'NearestMethodOrFunction',
+            \   'obsession': 'ObsessionStatus',
             \ },
             \ 'component_expand' : {
             \   'neomake' : 'lightline_neomake#component',
@@ -43,8 +44,8 @@ endfunction
 function! LightlineFilename()
     let fname = expand('%:t')
     return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
-                \ fname == '__Tagbar__' ? g:lightline.fname :
-                \ fname =~ '__Gundo\|NERD_tree' ? '' :
+                "\ fname =~ 'Vista' ? g:lightline.fname :
+                \ fname =~ 'Vista|__Gundo\|NERD_tree' ? '' :
                 \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
                 \ &ft == 'unite' ? unite#get_status_string() :
                 \ &ft == 'vimshell' ? vimshell#get_status_string() :
@@ -55,11 +56,11 @@ endfunction
 
 function! LightlineFugitive()
     try
-        if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+        "if expand('%:t') !~? 'Vista\|Gundo\|NERD' &&  exists('*fugitive#head')
             let mark = ' '  " edit here for cool mark
             let branch = fugitive#head()
             return branch !=# '' ? mark.branch : ''
-        endif
+        "endif
     catch
     endtry
     return ''
@@ -107,3 +108,5 @@ let g:lightline_neomake#sep = ' '
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
+"Don't show mode (Insert/Normal/etc) by default because it's already shown by lightline
+set noshowmode

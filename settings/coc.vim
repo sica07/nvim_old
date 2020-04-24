@@ -17,7 +17,7 @@ nnoremap <leader>c :CocList<cr>
 nnoremap <silent> <c-s> :CocList symbols<cr>
 
 "search outline of current file
-nnoremap <silent> <c-n> :CocList outline<cr>
+"nnoremap <silent> <c-n> :CocList outline<cr>
 
 "search quickfix window
 nnoremap <silent> <c-q> :CocList quickfix<cr>
@@ -41,7 +41,7 @@ nnoremap <silent> <c-u> :CocList buffers<CR>
 nnoremap <silent> <c-r> :CocList grep<CR>
 
 "search tags
-nnoremap <silent> <c-t> :CocList tags<CR>
+"nnoremap <silent> <c-t> :CocList tags<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)

@@ -1,6 +1,7 @@
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " Ensure you have installed some decent font to show these pretty symbols, then you can enable icon for the kind.
 let g:vista#renderer#enable_icon = 1
+let g:vista_default_executive = 'ctags'
 
 " The default icons can't be suitable for all the filetypes, you can extend it as you wish.
 let g:vista#renderer#icons = {
@@ -21,4 +22,6 @@ set statusline+=%{NearestMethodOrFunction()}
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 nmap <A-7> ,tt :Vista!!<CR>
 nnoremap <silent> ,tt :Vista!!<CR> =
-let g:vista_fzf_preview = ['right:30%']
+let g:vista_fzf_preview = ['right:50%']
+let g:vista_sidebar_width = 35
+nnoremap <silent> <c-n> :Vista finder coc<cr>

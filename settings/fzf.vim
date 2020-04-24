@@ -18,6 +18,7 @@ set rtp+=~/.fzf
 nnoremap <silent> <c-p> :FZF<CR>
 "search buffers
 "nnoremap <silent> <c-n> :BTags<cr>
+nnoremap <silent> <c-t> :Tags<cr>
 "search most recent used
 nnoremap <silent> <c-e> :FZFMru<CR>
 "search most recent used

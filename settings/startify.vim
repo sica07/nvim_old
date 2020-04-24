@@ -13,10 +13,11 @@ let g:startify_custom_header =""
 "let g:startify_custom_header =
       "\ 'map(g:ascii + startify#fortune#boxed(), "\"   \".v:val")'
 let g:startify_bookmarks = [
-            \ {'fsp':'~/Templates/FSPlaza.laravel'},
             \ {'qf':'~/Templates/quickfeedback.qf-admin'},
-            \ {'mpbv':'~/Templates/mpbv'},
+            \ {'hr':'~/Templates/azzureHR/api/application'},
             \ {'dailyroads':'~/Templates/dailyroads'},
+            \ {'fsp':'~/Templates/FSPlaza.laravel'},
+            \ {'mpbv':'~/Templates/mpbv'},
             \ {'sandbox':'~/Templates/sandbox'}
             \ ]
 
