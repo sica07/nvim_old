@@ -29,7 +29,7 @@ nnoremap <silent> <c-o> :CocList locationlist<cr>
 nnoremap <silent> <c-d> :CocList diagnostics<cr>
 
 "search marks
-nnoremap <silent> <c-m> :CocList marks<cr>
+"nnoremap <silent> <c-m> :CocList marks<cr>
 
 "search most recent used
 "nnoremap <silent> <c-e> :CocList mru<CR>
@@ -38,7 +38,7 @@ nnoremap <silent> <c-m> :CocList marks<cr>
 nnoremap <silent> <c-u> :CocList buffers<CR>
 
 "search with Rg
-nnoremap <silent> <c-r> :CocList grep<CR>
+"nnoremap <silent> <c-r> :CocList grep<CR>
 
 "search tags
 "nnoremap <silent> <c-t> :CocList tags<CR>

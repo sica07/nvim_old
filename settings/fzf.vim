@@ -28,7 +28,7 @@ nnoremap <silent> <c-e> :FZFMru<CR>
 "search commands
 "nnoremap <silent> <c-c> :Commands<cr>
 "search with Rg
-"nnoremap <silent> <c-r> :Rg<CR>
+nnoremap <silent> <c-r> :Rg<CR>
 "search lines in Buffer
 "nnoremap <silent> <c-i> :Lines<CR>
 "search lines in Buffer

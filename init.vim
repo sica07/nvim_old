@@ -8,37 +8,25 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
-"Plug 'ncm2/ncm2'
-"Plug 'roxma/nvim-yarp'
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-"Plug 'neoclide/coc.nvim', {'branch':'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
-" NOTE: you need to install completion sources to get completions. Check
-" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-"Plug 'ncm2/ncm2-bufword'
-"Plug 'ncm2/ncm2-path'
-"Plug 'phpactor/ncm2-phpactor'
-"Plug 'ncm2/ncm2-ultisnips'
-"Plug 'yuki-ycino/ncm2-dictionary'
-"Plug 'ncm2/ncm2-cssomni'
- "tree explorer
+"EXPLORING/SEARCHING CONTENT
 Plug 'scrooloose/nerdtree'
-"nerdtree open in all tabs
-"Plug 'jistr/vim-nerdtree-tabs'
-"Homepage"
-Plug 'mhinz/vim-startify'
-"Change to project root"
+"fuzzy search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'pbogut/fzf-mru.vim'
+"Automatically change to project root"
 Plug 'airblade/vim-rooter'
+"display indent levels
+Plug 'nathanaelkane/vim-indent-guides'
+"Find in code and edit
+Plug 'dyng/ctrlsf.vim'
+"undo list
+Plug 'sjl/gundo.vim'
+"tagbar
+Plug 'liuchengxu/vista.vim'
+
+"PRESENTATION
 "collections of colorschemes
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'gosukiwi/vim-atom-dark'
@@ -47,76 +35,41 @@ Plug 'spf13/vim-colors'
 Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
-"delete, change and add such surroundings in pairs
-Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'
-"Inserts matching bracket, paren, brace or quote
-Plug 'spf13/vim-autoclose'
-"Find in code and edit
-Plug 'dyng/ctrlsf.vim'
-"search results counting
-Plug 'vim-scripts/IndexedSearch'
-"display marks
-"Plug 'vim-scripts/ShowMarks'
-"match surroundings
-Plug 'andymass/vim-matchup'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
-"Automatically save sessions
-Plug 'tpope/vim-obsession'
-"Relative line numbers
-"Plug 'myusuf3/numbers.vim'
-"display indent levels
-Plug 'nathanaelkane/vim-indent-guides'
-"undo list
-Plug 'sjl/gundo.vim'
-"distraction-free writeing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'mattn/calendar-vim'
+"vs like incons (special icons should be loaded last)
+Plug 'ryanoasis/vim-devicons'
+
+"TEXT EDITING
+"delete, change and add such surroundings in pairs
+Plug 'tpope/vim-surround'
+"Inserts matching bracket, paren, brace or quote
+Plug 'spf13/vim-autoclose'
+"best text alignment and filtering
+Plug 'godlygeek/tabular'
+
+
 ""GIT
 "a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
-"git diff in the gutter
-"Plug 'airblade/vim-gitgutter'
-"VCS support
-"Plug 'juneedahamed/vc.vim'
-"fuzzy search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'pbogut/fzf-mru.vim'
 
 ""PROGRAMMING
-"syntax hilghlight
-Plug 'sheerun/vim-polyglot'
+"Language Server
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "code commenting
 Plug 'scrooloose/nerdcommenter'
-"best text alignment and filtering
-Plug 'godlygeek/tabular'
-"check the editorconfig file specifications
-"Plug 'editorconfig/editorconfig-vim'
-"autocompletion
-"Plug 'kristijanhusak/deoplete-phpactor'
 "linting
 Plug 'neomake/neomake'
 Plug 'mkalinski/vim-lightline_neomake'
-"tabgar"
-"Plug 'majutsushi/tagbar'
-Plug 'liuchengxu/vista.vim'
 "snippets"
 "Plug 'SirVer/ultisnips'
 Plug 'phux/vim-snippets'
+"Emmmet navigation
+Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
+"LANGUAGE SPECIFIC
+"syntax highlight
+Plug 'sheerun/vim-polyglot'
 ""PHP
-"Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-"Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-""Plug 'autozimu/LanguageClient-neovim', {
-""    \ 'branch': 'next',
-""    \ 'do': 'bash install.sh',
-""    \ }
-"Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-"Vim Syntax for PHP (included in polyglot)
-"Plug 'StanAngeloff/php.vim', {'for': 'php'}
-"Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
@@ -125,45 +78,27 @@ Plug 'alvan/vim-php-manual', {'for': 'php'}
 Plug 'Rican7/php-doc-modded', {'for': 'php'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
 Plug 'vim-vdebug/vdebug', {'for': 'php'}
-""JS (included in polyglot)
-"Plug 'elzr/vim-json'
-"Plug 'pangloss/vim-javascript'
-"Plug 'posva/vim-vue'
 " HTML
 "autoclose html tags
 Plug 'vim-scripts/HTML-AutoCloseTag', {'for': ['html', 'blade']}
-"support for css3 syntax (included in polyglot)
-"Plug 'hail2u/vim-css3-syntax'
-"support for haml,sass and scss syntax (included in polyglot)
-"Plug 'tpope/vim-haml'
-"Emmmet
-Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
 
 " PYTHON
 "Plug 'nvie/vim-flake8', {'for': 'python'}
 "Plug 'vim-scripts/indentpython.vim', {'for': 'python'} (polyglot)
 "Plug 'python-mode/python-mode', {'for': 'python'}
 
-
-" Misc
+" MISC
+"distraction-free writing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'mattn/calendar-vim'
 Plug 'vimwiki/vimwiki'
+"vimwiki
 Plug 'joanrivera/vim-zimwiki-syntax', {'for': 'vimwiki'}
 Plug 'freitass/todo.txt-vim'
-"Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']} (polyglot)
-
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
-"Plug 'ludovicchabant/vim-gutentags'
-
-
-" Nyaovim"
-
-"Plug 'rhysd/nyaovim-popup-tooltip'
-"Plug 'rhysd/nyaovim-markdown-preview'
-
-"vs like incons (special icons should be loaded last)
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -177,7 +112,7 @@ au BufWritePre * :%s/\s\+$//e
 
 " Set empty buffers/new files type to markdown
 au FileType vimwiki,markdown :color base16-one-light
-au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
+"au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
 
 
 
@@ -216,7 +151,7 @@ set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatib
 
 " ================ Turn Off Swap Files ==============
 
-"set noswapfile
+set noswapfile
 "swap files directory
 set directory^=$HOME/.vim/tmp//
 set nobackup
@@ -383,4 +318,3 @@ augroup END
 for fpath in split(globpath('~/.config/nvim/settings', '*.vim'), '\n')
     exe 'source' fpath
 endfor
-
