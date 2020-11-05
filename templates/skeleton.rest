@@ -1,0 +1,93 @@
+# GETing
+# GETing
+# GETing
+https://cat-fact.herokuapp.com
+--silent
+GET /facts
+
+# POSTing
+http://example.com/elasticsearch
+--silent
+
+// Specify optional headers.
+Content-Type: application/json; charset=utf-8
+
+POST /index/type?pretty
+{
+    "key": "a key",
+    "value": "a value"
+}
+
+# Submitting a form.
+https://example.net:8080
+--silent
+
+Accept: */*
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Cookie: userId=ac32:dfbe:8f1a:249c; sid=cfb48e3d98fcb1
+User-Agent: VRC
+
+POST /form
+var1=value of var1&
+var2=value of var2
+https://cat-fact.herokuapp.com
+GET /
+
+# POSTing
+http://example.com/elasticsearch
+
+// Specify optional headers.
+Content-Type: application/json; charset=utf-8
+
+POST /index/type?pretty
+{
+    "key": "a key",
+    "value": "a value"
+}
+
+# Submitting a form.
+https://example.net:8080
+
+Accept: */*
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Cookie: userId=ac32:dfbe:8f1a:249c; sid=cfb48e3d98fcb1
+User-Agent: VRC
+
+POST /form
+var1=value of var1&
+var2=value of var2
+https://cat-fact.herokuapp.com
+GET /
+
+# POSTing
+http://example.com/elasticsearch
+
+// Specify optional headers.
+Content-Type: application/json; charset=utf-8
+
+POST /index/type?pretty
+{
+    "key": "a key",
+    "value": "a value"
+}
+
+# Submitting a form.
+https://example.net:8080
+
+Accept: */*
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Cookie: userId=ac32:dfbe:8f1a:249c; sid=cfb48e3d98fcb1
+User-Agent: VRC
+
+POST /form
+var1=value of var1&
+var2=value of var2
