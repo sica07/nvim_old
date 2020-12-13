@@ -9,36 +9,44 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 nnoremap <leader>c :CocList<cr>
-
+"rename variable inside document
+nmap <silent> <c-c> <Plug>(coc-cursors-word)
+nmap <silent> <c-x> :CocCommand document.renameCurrentWord<cr>
 "search files
 "nnoremap <silent> <c-p> :CocList files<CR>
+nnoremap <silent> <c-p> :CocCommand fzf-preview.ProjectFiles<cr>
 
 "search symbols
-nnoremap <silent> <c-s> :CocList symbols<cr>
+"nnoremap <silent> <c-s> :CocList symbols<cr>
+nnoremap <silent> <c-s> :CocCommand fzf-preview.CocTypeDefinitions<cr>
 
 "search outline of current file
 "nnoremap <silent> <c-n> :CocList outline<cr>
 
 "search quickfix window
-nnoremap <silent> <c-q> :CocList quickfix<cr>
+nnoremap <silent> <c-q> :CocCommand fzf-preview.Quickfix<cr>
 
 "search locationlist window
-nnoremap <silent> <c-o> :CocList locationlist<cr>
+nnoremap <silent> <c-o> :CocCommand fzf-preview.LocationList<cr>
 
 "search symbols
-nnoremap <silent> <c-d> :CocList diagnostics<cr>
+nnoremap <silent> <c-d> :CocCommand fzf-preview.CocDiagnostics<cr>
 
 "search marks
-"nnoremap <silent> <c-m> :CocList marks<cr>
+nnoremap <silent> <c-k> :CocCommand fzf-preview.Marks<cr>
 
 "search most recent used
-"nnoremap <silent> <c-e> :CocList mru<CR>
+nnoremap <silent> <c-e> :CocCommand fzf-preview.MruFiles<CR>
 
 "search buffers
-nnoremap <silent> <c-u> :CocList buffers<CR>
+nnoremap <silent> <c-u> :CocCommand fzf-preview.Buffers<CR>
 
 "search with Rg
-"nnoremap <silent> <c-r> :CocList grep<CR>
+"nnoremap <silent> <c-r> :CocCommand fzf-preview.ProjectGrep<CR>
+"search tags
+nnoremap <silent> <c-t> :CocCommand fzf-preview.Ctags<CR>
+"list git actions
+nnoremap <silent> <c-g> :CocCommand fzf-preview.GitActions<CR>
 
 "search tags
 "nnoremap <silent> <c-t> :CocList tags<CR>

@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 "Automatically change to project root"
 Plug 'airblade/vim-rooter'
 "display indent levels
@@ -252,8 +253,8 @@ elseif has("termguicolors")
     "color gruvbox
     "color darkburn
     "color darktango
-    ""color base16-material
-    color grayscale-dark
+    color base16-material
+    "color grayscale-dark
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -318,3 +319,6 @@ augroup END
 for fpath in split(globpath('~/.config/nvim/settings', '*.vim'), '\n')
     exe 'source' fpath
 endfor
+
+
+let g:node_client_debug = 1

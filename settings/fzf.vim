@@ -15,12 +15,12 @@ set rtp+=~/.fzf
 "vnoremap <leader>f "hy:exec "Rg ".escape('<C-R>h', "/\.*$^~[()")<cr>
 
 "search files
-nnoremap <silent> <c-p> :FZF<CR>
+"nnoremap <silent> <c-p> :FZF<CR>
 "search buffers
-"nnoremap <silent> <c-n> :BTags<cr>
-nnoremap <silent> <c-t> :Tags<cr>
+nnoremap <silent> <c-n> :BTags<cr>
+"nnoremap <silent> <c-t> :Tags<cr>
 "search most recent used
-nnoremap <silent> <c-e> :FZFMru<CR>
+"nnoremap <silent> <c-e> :FZFMru<CR>
 "search most recent used
 "nnoremap <silent> <c-u> :Buffers<CR>
 "search keymaps
@@ -32,4 +32,4 @@ nnoremap <silent> <c-r> :Rg<CR>
 "search lines in Buffer
 "nnoremap <silent> <c-i> :Lines<CR>
 "search lines in Buffer
-nnoremap <silent> <c-g> :Commits!<CR>
+"nnoremap <silent> <c-g> :Commits!<CR>

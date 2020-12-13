@@ -1,18 +1,18 @@
 {
     "languageserver": {
         "elmLS": {
-          "command": "~/.nvm/versions/node/v8.16.2/bin/elm-language-server",
-          "args": ["--stdio"],
-          "filetypes": ["elm"],
-          "rootPatterns": ["elm.json"],
-          "trace.server": "verbose",
-          "initializationOptions": {
-            "runtime": "node",
-            "elmPath": "elm",
-            "elmAnalyseTrigger": "change",
-            "elmFormatPath": "elm-format",
-            "elmTestPath": "elm-test"
-          }
+            "command": "~/.nvm/versions/node/v8.16.2/bin/elm-language-server",
+            "args": ["--stdio"],
+            "filetypes": ["elm"],
+            "rootPatterns": ["elm.json"],
+            "trace.server": "verbose",
+            "initializationOptions": {
+                "runtime": "node",
+                "elmPath": "elm",
+                "elmAnalyseTrigger": "change",
+                "elmFormatPath": "elm-format",
+                "elmTestPath": "elm-test"
+            }
         }
     },
     "snippets.ultisnips.directories": [
