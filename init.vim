@@ -38,6 +38,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
+Plug 'vimpostor/vim-tpipeline'
+let g:tpipeline_split = 1
 "vs like incons (special icons should be loaded last)
 Plug 'ryanoasis/vim-devicons'
 
@@ -149,6 +151,7 @@ set secure
 let mapleader=","               " Change the leader to be a comma vs slash
 let maplocalleader=","               " Change the leader to be a comma vs slash
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
+set encoding=UTF-8
 
 " ================ Turn Off Swap Files ==============
 
@@ -163,9 +166,9 @@ set nowb
 
 set nowrap                      " Do not wrap long lines
 set autoindent                  " Indent at the same level as the previous one
-set shiftwidth=4                " Indentation of 2 spaces
-set softtabstop=4
-set tabstop=4                   " Width of a TAB character
+set shiftwidth=2                " Indentation of 2 spaces
+set softtabstop=2
+set tabstop=2                   " Width of a TAB character
 set expandtab                   " Replace <TAB> with spacesP
 set linespace=10                 " No extra spaces between rows
 set ffs=unix,dos,mac            " Try recognizing dos, unix, and mac line endings.
@@ -242,7 +245,7 @@ if has("gui_running")	" GUI color and font settings
     "set guifont=Fura\ Mono\ Nerd\ Font\ 13
     set guifont=Iosevka\ Term\ 11,Menlo\ for\ Powerline\ 10,DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10,Menlo\ Regular\ 12,Consolas\ Regular\ 13,Courier\ New\ Regular\ 14
     ""colorscheme base16-tomorrow
-    colorscheme dracula
+    colorscheme base16-onedark
 elseif has("termguicolors")
     set termguicolors
     "color atom
@@ -253,7 +256,8 @@ elseif has("termguicolors")
     "color gruvbox
     "color darkburn
     "color darktango
-    color base16-material
+    "color base16-material
+    color base16-onedark
     "color grayscale-dark
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

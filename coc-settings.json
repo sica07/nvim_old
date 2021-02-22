@@ -13,6 +13,14 @@
                 "elmFormatPath": "elm-format",
                 "elmTestPath": "elm-test"
             }
+        },
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
         }
     },
     "snippets.ultisnips.directories": [
@@ -20,6 +28,7 @@
     ],
     "coc.preferences.colorSupport": true,
     "coc.preferences.formatOnSaveFiletypes": ["elm"],
+    "coc.preferences.formatOnSaveFiletypes": ["css", "javascript"],
     "python.jediPath":"~/.local/lib/python3.5/site-packages/jedi",
     "codeLens.enable": true
 }
