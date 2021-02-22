@@ -64,6 +64,8 @@ Plug 'scrooloose/nerdcommenter'
 "linting
 Plug 'neomake/neomake'
 Plug 'mkalinski/vim-lightline_neomake'
+"highlight other uses of the current word under the cursor
+Plug 'RRethy/vim-illuminate'
 "snippets"
 "Plug 'SirVer/ultisnips'
 Plug 'phux/vim-snippets'
