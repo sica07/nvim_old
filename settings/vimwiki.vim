@@ -6,6 +6,10 @@
                        \{'path': '~/Dropbox/Apps/vimwiki/zettelkasten',
                        \ 'syntax': 'markdown', 'ext': '.md',
                        \ 'auto_tags': 1
+                       \},
+                       \{'path': '~/Dropbox/Apps/vimwiki/jwwiki',
+                       \ 'syntax': 'markdown', 'ext': '.md',
+                       \ 'auto_tags': 1
                        \}]
 :nnoremap <leader>w@ "=strftime(" *@created %d-%m-%Y*")<CR>P
 :inoremap <leader>w@ <C-R>=strftime(" *@created %d-%m-%Y*")<CR>
