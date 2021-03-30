@@ -29,6 +29,7 @@ Plug 'liuchengxu/vista.vim'
 
 "PRESENTATION
 "collections of colorschemes
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'tek256/simple-dark'
@@ -36,6 +37,9 @@ Plug 'spf13/vim-colors'
 Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
 Plug 'vimpostor/vim-tpipeline'
@@ -237,6 +241,9 @@ set sidescroll=1
 hi vertsplit guifg=bg guibg=bg
 " ================ GUI =========================
 set background=dark
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 if has("gui_running")	" GUI color and font settings
     set guioptions-=m           " Remove the menubar
     set guioptions-=T           " Remove the toolbar
@@ -247,7 +254,7 @@ if has("gui_running")	" GUI color and font settings
     "set guifont=Fura\ Mono\ Nerd\ Font\ 13
     set guifont=Iosevka\ Term\ 11,Menlo\ for\ Powerline\ 10,DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10,Menlo\ Regular\ 12,Consolas\ Regular\ 13,Courier\ New\ Regular\ 14
     ""colorscheme base16-tomorrow
-    colorscheme base16-onedark
+    colorscheme onedark
 elseif has("termguicolors")
     set termguicolors
     "color atom
@@ -259,7 +266,7 @@ elseif has("termguicolors")
     "color darkburn
     "color darktango
     "color base16-material
-    color base16-onedark
+    color onedark
     "color grayscale-dark
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
