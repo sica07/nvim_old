@@ -22,7 +22,7 @@
 :nnoremap <leader>wD "=strftime('#### %d/%m/%Y')<CR>P
 :inoremap <leader>wD <C-R>=strftime('#### %d/%m/%Y')<CR>
 :nnoremap <leader>w/ :VimwikiSearchTags
-:nnoremap <leader>wT :Toc
+:nnoremap <leader>wT :Toc<CR>
 
 :nnoremap <leader>mp :MarkdownPreview<CR>
 let g:mkdp_path_to_chrome='/usr/bin/surf'
