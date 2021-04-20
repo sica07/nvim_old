@@ -33,8 +33,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'tek256/simple-dark'
-Plug 'spf13/vim-colors'
-Plug 'flazz/vim-colorschemes'
+Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
+"Plug 'spf13/vim-colors'
+"Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'drewtempelmeyer/palenight.vim'
@@ -120,7 +121,7 @@ au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/c
 au BufWritePre * :%s/\s\+$//e
 
 " Set empty buffers/new files type to markdown
-au FileType vimwiki,markdown :color base16-one-light
+au FileType vimwiki,markdown :color paper
 "au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
 
 
@@ -180,7 +181,8 @@ set linespace=10                 " No extra spaces between rows
 set ffs=unix,dos,mac            " Try recognizing dos, unix, and mac line endings.
 
 " Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml,json,markdown autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+"autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml,json,markdown autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+"autocmd FileType c,cpp,java,go,javascript,python,twig,xml,yml,json,markdown autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 filetype plugin on
 filetype indent on
@@ -227,7 +229,7 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set dictionary=/usr/share/dict/words
 set spelllang=en
-set spell
+set nospell
 
 " ================ Windows ==========================
 set splitright                  " Puts new vsplit windows to the right of the current
@@ -240,47 +242,33 @@ set sidescroll=1
 "Get rid of ugly split borders.
 hi vertsplit guifg=bg guibg=bg
 " ================ GUI =========================
-set background=dark
+"set background=dark
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
-if has("gui_running")	" GUI color and font settings
-    set guioptions-=m           " Remove the menubar
-    set guioptions-=T           " Remove the toolbar
-    set guioptions-=L           " Remove the left scroll
-    set guioptions-=r           " Remove the right scroll
-    set guioptions-=e           " Remove tabs as we will use airline's tabs
-
-    "set guifont=Fura\ Mono\ Nerd\ Font\ 13
-    set guifont=Iosevka\ Term\ 11,Menlo\ for\ Powerline\ 10,DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10,Menlo\ Regular\ 12,Consolas\ Regular\ 13,Courier\ New\ Regular\ 14
-    ""colorscheme base16-tomorrow
-    colorscheme onedark
-elseif has("termguicolors")
-    set termguicolors
-    "color atom
-    "color base16-github
-    "color eclipse
-    "color base16-one-light
-    "color twilight
-    "color gruvbox
-    "color darkburn
-    "color darktango
-    "color base16-material
-    color onedark
-    "color grayscale-dark
+if has("termguicolors")
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    "status line: 0: never 1: only if there are at least two windows 2: always
+    set termguicolors
+        "status line: 0: never 1: only if there are at least two windows 2: always
     set laststatus=2
-elseif &term =~ '256color'
-    "set t_Co=256                " 256 color mode
-    ""let g:onedark_termcolors=256
-    ""colorscheme base16-onedark
-    "colors base16-material-darker
-    "color xoria256
-    set t_tu=
 endif
+"colorscheme atom
+"colorscheme base16-github
+"colorscheme eclipse
+"colorscheme base16-one-light
+"colorscheme twilight
+"colorscheme gruvbox
+"colorscheme darktango
+"colorscheme base16-material
+"colorscheme onedark
+"colorscheme palenight
+"colorscheme dracula
+let g:nord_italic=1
+let g:nord_italic_comments=1
+let g:nord_bold=1
+colorscheme nord
 
 " Show tab number (useful for <leader>1, <leader>2.. mapping)
 autocmd VimEnter * set guitablabel=%N:\ %t\ %M

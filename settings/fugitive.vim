@@ -13,6 +13,7 @@ nnoremap <silent> <leader>gpp :diffput<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gll :Glog --  %<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 ":Git add %"
 nnoremap <silent> <leader>ga :Gwrite<CR>
