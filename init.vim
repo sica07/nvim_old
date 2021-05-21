@@ -34,6 +34,7 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'tek256/simple-dark'
 Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 "Plug 'spf13/vim-colors'
 "Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
@@ -81,7 +82,7 @@ Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
 Plug 'sheerun/vim-polyglot'
 ""PHP
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
+Plug 'aeke/vim-php-cs-fixer', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'alvan/vim-php-manual', {'for': 'php'}
@@ -246,14 +247,15 @@ hi vertsplit guifg=bg guibg=bg
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
-if has("termguicolors")
     "tmux specific settings
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    let &t_ZH="\<Esc>[3m"
+    let &t_ZR="\<Esc>[23m"
     set termguicolors
         "status line: 0: never 1: only if there are at least two windows 2: always
-    set laststatus=2
-endif
+    "set laststatus=2
+"endif
 "colorscheme atom
 "colorscheme base16-github
 "colorscheme eclipse
