@@ -14,21 +14,21 @@
                 "elmTestPath": "elm-test"
             }
         },
-        "intelephense": {
+        /*"intelephense": {
             "command": "intelephense",
             "args": ["--stdio"],
             "filetypes": ["php"],
             "initializationOptions": {
                 "storagePath": "/tmp/intelephense"
             }
-        }
+        }*/
     },
     "snippets.ultisnips.directories": [
         "UltiSnips"
     ],
     "coc.preferences.colorSupport": true,
-    "coc.preferences.formatOnSaveFiletypes": ["elm"],
-    "coc.preferences.formatOnSaveFiletypes": ["css", "javascript"],
+    //"coc.preferences.formatOnSaveFiletypes": ["elm"],
+    //"coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "html"],
     "python.jediPath":"~/.local/lib/python3.5/site-packages/jedi",
     "codeLens.enable": true
 }

@@ -14,54 +14,54 @@ nmap <silent> <c-c> <Plug>(coc-cursors-word)
 nmap <silent> <c-x> :CocCommand document.renameCurrentWord<cr>
 "search files
 "nnoremap <silent> <c-p> :CocList files<CR>
-nnoremap <silent> <c-p> :CocCommand fzf-preview.ProjectFiles<cr>
+"nnoremap <silent> <c-p> :CocCommand fzf-preview.ProjectFiles<cr>
 
 "search symbols
 "nnoremap <silent> <c-s> :CocList symbols<cr>
-nnoremap <silent> <c-s> :CocCommand fzf-preview.CocTypeDefinitions<cr>
+"nnoremap <silent> <c-s> :CocCommand fzf-preview.CocTypeDefinitions<cr>
 
 "search outline of current file
 "nnoremap <silent> <c-n> :CocList outline<cr>
 
 "search quickfix window
-nnoremap <silent> <c-q> :CocCommand fzf-preview.Quickfix<cr>
+"nnoremap <silent> <c-q> :CocCommand fzf-preview.Quickfix<cr>
 
 "search locationlist window
-nnoremap <silent> <c-o> :CocCommand fzf-preview.LocationList<cr>
+"nnoremap <silent> <c-o> :CocCommand fzf-preview.LocationList<cr>
 
 "search symbols
-nnoremap <silent> <c-d> :CocCommand fzf-preview.CocDiagnostics<cr>
+"nnoremap <silent> <c-d> :CocCommand fzf-preview.CocDiagnostics<cr>
 
 "search marks
-nnoremap <silent> <c-k> :CocCommand fzf-preview.Marks<cr>
+"nnoremap <silent> <c-k> :CocCommand fzf-preview.Marks<cr>
 
 "search most recent used
 nnoremap <silent> <c-e> :CocCommand fzf-preview.MruFiles<CR>
 
 "search buffers
-nnoremap <silent> <c-u> :CocCommand fzf-preview.Buffers<CR>
+"nnoremap <silent> <c-u> :CocCommand fzf-preview.Buffers<CR>
 
 "search with Rg
 "nnoremap <silent> <c-r> :CocCommand fzf-preview.ProjectGrep<CR>
 "search tags
-nnoremap <silent> <c-t> :CocCommand fzf-preview.Ctags<CR>
+"nnoremap <silent> <c-t> :CocCommand fzf-preview.Ctags<CR>
 "list git actions
-nnoremap <silent> <c-g> :CocCommand fzf-preview.GitActions<CR>
+"nnoremap <silent> <c-g> :CocCommand fzf-preview.GitActions<CR>
 
 "search tags
 "nnoremap <silent> <c-t> :CocList tags<CR>
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> g] <Plug>(coc-diagnostics-next)
-nmap <silent> g[ <Plug>(coc-diagnostics-prev)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> S <Plug>(coc-fix-current)
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gt <Plug>(coc-type-definition)
+"nmap <silent> g] <Plug>(coc-diagnostics-next)
+"nmap <silent> g[ <Plug>(coc-diagnostics-prev)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> S <Plug>(coc-fix-current)
 
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+"nnoremap <silent> K :call <SID>show_documentation()<CR>
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
@@ -92,7 +92,7 @@ function! s:GrepFromSelected(type)
 endfunction
 
 "coc-highliths
-highlight CocErrorHighlight ctermfg=Red  guifg=#ff0000
+"highlight CocErrorHighlight ctermfg=Red  guifg=#ff0000
 
 " used for trigger completion, completion confirm, snippet expand and jump like VSCod
 inoremap <silent><expr> <TAB>

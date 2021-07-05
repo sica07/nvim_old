@@ -12,10 +12,15 @@ call plug#begin('~/.config/nvim/plugged')
 "EXPLORING/SEARCHING CONTENT
 Plug 'scrooloose/nerdtree'
 "fuzzy search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'pbogut/fzf-mru.vim'
-Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
+"Plug 'pbogut/fzf-mru.vim'
+"Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'fannheyward/telescope-coc.nvim'
+:Plug 'neovim/nvim-lspconfig'
 "Automatically change to project root"
 Plug 'airblade/vim-rooter'
 "display indent levels
@@ -73,8 +78,8 @@ Plug 'mkalinski/vim-lightline_neomake'
 "highlight other uses of the current word under the cursor
 Plug 'RRethy/vim-illuminate'
 "snippets"
-"Plug 'SirVer/ultisnips'
-Plug 'phux/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 "Emmmet navigation
 Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
 "LANGUAGE SPECIFIC
