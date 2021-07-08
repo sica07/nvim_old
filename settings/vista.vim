@@ -24,4 +24,4 @@ nmap <A-7> ,tt :Vista!!<CR>
 nnoremap <silent> ,tt :Vista!!<CR> =
 let g:vista_fzf_preview = ['right:50%']
 let g:vista_sidebar_width = 35
-nnoremap <silent> <c-n> :Vista finder coc<cr>
+"nnoremap <silent> <c-n> :Vista finder coc<cr>

@@ -91,6 +91,7 @@ Plug 'sheerun/vim-polyglot'
 ""PHP
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'aeke/vim-php-cs-fixer', {'for': 'php'}
+Plug 'beanworks/vim-phpfmt', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'alvan/vim-php-manual', {'for': 'php'}
@@ -160,6 +161,7 @@ set autowriteall                " Automatically write the file when switching bu
 set ruler                       " Show cursor position all the time
 set hidden                      " Allow buffer switching without saving
 set clipboard=unnamed           " Yank to the default register (*) by default
+set colorcolumn=100
 "set lazyredraw                  " Dont redraw automatically to speed up refresh, especially with relative numbers
 syntax on                       " Syntax highligt on
 set exrc

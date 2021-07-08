@@ -15,4 +15,4 @@ nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>x :call PhpCsFixerFixFile()<CR>
 
 "fix on save
-autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+"autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
