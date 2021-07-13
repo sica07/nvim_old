@@ -91,8 +91,8 @@ Plug 'sheerun/vim-polyglot'
 ""PHP
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'aeke/vim-php-cs-fixer', {'for': 'php'}
-Plug 'beanworks/vim-phpfmt', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
+Plug 'vim-scripts/phpcs.vim', {'for': 'php'}
 Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'alvan/vim-php-manual', {'for': 'php'}
 Plug 'Rican7/php-doc-modded', {'for': 'php'}
