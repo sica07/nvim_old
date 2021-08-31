@@ -156,4 +156,4 @@ nmap :term :sp term://zsh
 "Escape terminal mode in an Nvim Terminal"
 :tnoremap <Esc> <C-\><C-n>
 
-:iabbrev <expr> ,d strftime('%c')
+:iabbrev <expr> @d strftime('%Y-%m-%d')

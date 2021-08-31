@@ -25,8 +25,8 @@
 :nnoremap <leader>wT :Toc<CR>
 
 :nnoremap <leader>mp :MarkdownPreview<CR>
-let g:mkdp_path_to_chrome='/usr/bin/surf'
-let g:mkdp_browser = 'chrome'
+"let g:mkdp_path_to_chrome='/usr/bin/surf'
+let g:mkdp_browser = 'vivaldi'
 
 let g:vimwiki_listsyms = '✗○◐●✓'
 let g:tagbar_type_vimwiki = {
