@@ -119,7 +119,7 @@ Plug 'freitass/todo.txt-vim'
 "preview in browser html, md, rdoc, textile, etc files
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
-
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " update tags in background whenever you write a php, js and python file

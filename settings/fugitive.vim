@@ -4,8 +4,8 @@
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 "Mappings
-nnoremap <silent> <leader>g :Gstatus<CR>
-nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>g :Git<CR>
+nnoremap <silent> <leader>gs :Git<CR>
 nnoremap <silent> <leader>gd :Gvdiff<CR>
 nnoremap <slient> <leader>gdh :diffget //2<CR>
 nnoremap <silent> <leader>gdl :diffget //3<CR>
