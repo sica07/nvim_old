@@ -1,5 +1,5 @@
 let g:lightline = {
-            \ 'colorscheme': 'nord',
+            \ 'colorscheme': 'everforest',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitstatus','filename','method' ],['obsession']],
             \   'right': [ ['cocstatus'],['currentfunction'],['lineinfo'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype', 'neomake']]

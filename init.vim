@@ -39,12 +39,13 @@ Plug 'liuchengxu/vista.vim'
 "collections of colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'tek256/simple-dark'
 Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 "Plug 'spf13/vim-colors'
 "Plug 'flazz/vim-colorschemes'
+Plug 'fxn/vim-monochrome'
+Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/everforest'
+Plug 'mcchrish/zenbones.nvim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'drewtempelmeyer/palenight.vim'
@@ -266,21 +267,6 @@ endif
         "status line: 0: never 1: only if there are at least two windows 2: always
     "set laststatus=2
 "endif
-"colorscheme atom
-"colorscheme base16-github
-"colorscheme eclipse
-"colorscheme base16-one-light
-"colorscheme twilight
-"colorscheme gruvbox
-"colorscheme darktango
-"colorscheme base16-material
-"colorscheme onedark
-"colorscheme palenight
-"colorscheme dracula
-let g:nord_italic=1
-let g:nord_italic_comments=1
-let g:nord_bold=1
-colorscheme nord
 
 " Show tab number (useful for <leader>1, <leader>2.. mapping)
 autocmd VimEnter * set guitablabel=%N:\ %t\ %M
