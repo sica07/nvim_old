@@ -2,11 +2,14 @@ lua << EOF
 local basic_setup = {
   on_attach = function(client, bufnr)
     require "lsp_signature".on_attach()
-    require'completion'.on_attach()
+    --require'completion'.on_attach()
   end,
 }
 require'lspconfig'.intelephense.setup(basic_setup)
 require'lspconfig'.tsserver.setup(basic_setup)
+
+require'colorizer'.setup()
+require('neoscroll').setup()
 EOF
 
 nnoremap <silent> gt <cmd>lua vim.lsp.buf.type_definition()<CR>

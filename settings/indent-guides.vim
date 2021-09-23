@@ -1,5 +1,13 @@
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-nnoremap <Leader>i :IndentGuidesToggle<Cr>
-let g:indent_guides_enable_on_vim_startup = 0
+lua << EOF
+vim.opt.list = true
+vim.opt.listchars = {
+    space = "⋅",
+    eol = "↴",
+}
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_end_of_line = true,
+    buftype_exclude = {"terminal"}
+}
+EOF

@@ -29,7 +29,7 @@ endif
 cmap Tabe tabe
 
 "Moving between tabs
-noremap <S-h> gT
+"noremap <S-h> gT
 noremap <S-l> gt
 
 "Create new tab

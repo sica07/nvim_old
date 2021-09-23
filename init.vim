@@ -10,7 +10,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 "EXPLORING/SEARCHING CONTENT
-Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-tree.lua'
+"Plug 'scrooloose/nerdtree'
 "fuzzy search
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'junegunn/fzf.vim'
@@ -19,21 +20,29 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'fannheyward/telescope-coc.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+"Plug 'fannheyward/telescope-coc.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'nvim-lua/completion-nvim'
-
+"Plug 'nvim-lua/completion-nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'akinsho/bufferline.nvim'
+"Next generation quickfix
+Plug 'kevinhwang91/nvim-bqf'
 "Automatically change to project root"
-Plug 'airblade/vim-rooter'
+"Plug 'airblade/vim-rooter'
+" Vim Script
+Plug 'ahmedkhalf/project.nvim'
 "display indent levels
-Plug 'nathanaelkane/vim-indent-guides'
-"Find in code and edit
-Plug 'dyng/ctrlsf.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 "undo list
 Plug 'sjl/gundo.vim'
 "tagbar
 Plug 'liuchengxu/vista.vim'
+"search
+Plug 'windwp/nvim-spectre'
 
 "PRESENTATION
 "collections of colorschemes
@@ -52,11 +61,14 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 "statusbar on steroids
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'vimpostor/vim-tpipeline'
+Plug 'norcalli/nvim-colorizer.lua'
+
 let g:tpipeline_split = 1
 "vs like incons (special icons should be loaded last)
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
 "TEXT EDITING
 "delete, change and add such surroundings in pairs
@@ -70,6 +82,7 @@ Plug 'godlygeek/tabular'
 ""GIT
 "a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+Plug 'lewis6991/gitsigns.nvim'
 
 ""PROGRAMMING
 "Language Server
@@ -78,14 +91,26 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdcommenter'
 "linting
 Plug 'neomake/neomake'
-Plug 'mkalinski/vim-lightline_neomake'
+"Plug 'mkalinski/vim-lightline_neomake'
 "highlight other uses of the current word under the cursor
 Plug 'RRethy/vim-illuminate'
 "snippets"
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+
+Plug 'windwp/nvim-autopairs'
 "Emmmet navigation
 Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}
+Plug 'karb94/neoscroll.nvim'
+
+Plug 'phaazon/hop.nvim'
 "LANGUAGE SPECIFIC
 "syntax highlight
 Plug 'sheerun/vim-polyglot'
@@ -107,11 +132,12 @@ Plug 'vim-scripts/HTML-AutoCloseTag', {'for': ['html', 'blade']}
 "Plug 'nvie/vim-flake8', {'for': 'python'}
 "Plug 'vim-scripts/indentpython.vim', {'for': 'python'} (polyglot)
 "Plug 'python-mode/python-mode', {'for': 'python'}
-
+Plug 'metakirby5/codi.vim'
 " MISC
 "distraction-free writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'Pocco81/TrueZen.nvim'
+"Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/limelight.vim'
 Plug 'mattn/calendar-vim'
 Plug 'vimwiki/vimwiki'
 "vimwiki
