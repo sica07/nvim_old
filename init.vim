@@ -28,9 +28,10 @@ Plug 'ray-x/lsp_signature.nvim'
 "Plug 'nvim-lua/completion-nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-Plug 'akinsho/bufferline.nvim'
+"Plug 'akinsho/bufferline.nvim'
 "Next generation quickfix
 Plug 'kevinhwang91/nvim-bqf'
+Plug 'folke/trouble.nvim'
 "Automatically change to project root"
 "Plug 'airblade/vim-rooter'
 " Vim Script
@@ -61,7 +62,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 "statusbar on steroids
-"Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'vimpostor/vim-tpipeline'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -86,7 +87,7 @@ Plug 'lewis6991/gitsigns.nvim'
 
 ""PROGRAMMING
 "Language Server
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "code commenting
 Plug 'scrooloose/nerdcommenter'
 "linting

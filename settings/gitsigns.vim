@@ -17,11 +17,14 @@ gitsigns.setup {
       ["n <leader>hp"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
       ["n <leader>hb"] = '<cmd>lua require"gitsigns".blame_line()<CR>',
    },
-   numhl = false,
+   numhl = true,
+   current_line_blame = true,
+   signcolumn = false,
+   word_diff = true,
 
    sign_priority = 5,
    signs = {
-      add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
+      add = { hl = "DiffAdd", text = "+", numhl = "GitSignsAddNr" },
       change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
       changedelete = { hl = "DiffChange", text = "~", numhl = "GitSignsChangeNr" },
       delete = { hl = "DiffDelete", text = "_", numhl = "GitSignsDeleteNr" },

@@ -19,7 +19,7 @@ set statusline+=%{NearestMethodOrFunction()}
 "
 " If you want to show the nearest function in your statusline automatically,
 " you can add the following line to your vimrc
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+"autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 nmap <A-7> ,tt :Vista!!<CR>
 nnoremap <silent> ,tt :Vista!!<CR> =
 let g:vista_fzf_preview = ['right:50%']
