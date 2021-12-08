@@ -1,6 +1,8 @@
 let g:nord_italic=1
 let g:nord_italic_comments=1
 let g:nord_bold=1
+let g:zenbones_compat = 1
+colorscheme zenbones
 "colorscheme nord
 let g:everforest_background = 'medium'
 let g:everforest_current_word = 'grey background'
@@ -10,7 +12,7 @@ let g:everforest_enable_italic = 1
 let g:everforest_sign_column_background = 'none'
 let g:everforest_diagnostic_text_highlight = 1
 let g:everforest_diagnostic_line_highlight = 1
-colorscheme everforest
+"colorscheme everforest
 
 let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_current_word = 'grey background'

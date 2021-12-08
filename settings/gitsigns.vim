@@ -14,21 +14,21 @@ gitsigns.setup {
       ["n <leader>hs"] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
       ["n <leader>hu"] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
       ["n <leader>hr"] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-      ["n <leader>hp"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+      ["n <leader>gw"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
       ["n <leader>hb"] = '<cmd>lua require"gitsigns".blame_line()<CR>',
    },
    numhl = true,
    current_line_blame = true,
-   signcolumn = false,
+   signcolumn = true,
    word_diff = true,
 
    sign_priority = 5,
    signs = {
       add = { hl = "DiffAdd", text = "+", numhl = "GitSignsAddNr" },
-      change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
+      change = { hl = "DiffChange", text = "~", numhl = "GitSignsChangeNr" },
       changedelete = { hl = "DiffChange", text = "~", numhl = "GitSignsChangeNr" },
-      delete = { hl = "DiffDelete", text = "_", numhl = "GitSignsDeleteNr" },
-      topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
+      delete = { hl = "DiffDelete", text = "-", numhl = "GitSignsDeleteNr" },
+      topdelete = { hl = "DiffDelete", text = "-", numhl = "GitSignsDeleteNr" },
    },
 
    status_formatter = nil, -- Use default

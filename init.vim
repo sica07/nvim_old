@@ -56,14 +56,14 @@ Plug 'fxn/vim-monochrome'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 Plug 'mcchrish/zenbones.nvim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'rktjmp/lush.nvim' "needed by zenbones
 Plug 'chriskempson/base16-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 "statusbar on steroids
 Plug 'itchyny/lightline.vim'
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+"Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'vimpostor/vim-tpipeline'
 Plug 'norcalli/nvim-colorizer.lua'
 
@@ -227,9 +227,9 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list
+"set list
 "set listchars=tab:▸\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
-set listchars=tab:-\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
+"set listchars=tab:-\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -281,7 +281,7 @@ set sidescroll=1
 "Get rid of ugly split borders.
 hi vertsplit guifg=bg guibg=bg
 " ================ GUI =========================
-"set background=dark
+set background=light
 if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
