@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 "EXPLORING/SEARCHING CONTENT
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'tpope/vim-unimpaired'
 "Plug 'scrooloose/nerdtree'
 "fuzzy search
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -23,7 +24,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 "Plug 'fannheyward/telescope-coc.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'ray-x/lsp_signature.nvim'
 "Plug 'nvim-lua/completion-nvim'
 Plug 'onsails/lspkind-nvim'
@@ -50,6 +51,8 @@ Plug 'windwp/nvim-spectre'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
+Plug 'AlessandroYorba/Alduin'
+Plug 'NLKNguyen/papercolor-theme'
 "Plug 'spf13/vim-colors'
 "Plug 'flazz/vim-colorschemes'
 Plug 'fxn/vim-monochrome'
