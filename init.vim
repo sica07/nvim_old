@@ -151,6 +151,11 @@ Plug 'freitass/todo.txt-vim'
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
+
+
+"Lua Love2d
+
+Plugin 'https://github.com/davisdude/vim-love-docs/tree/build'
 call plug#end()
 
 " update tags in background whenever you write a php, js and python file
@@ -176,7 +181,7 @@ au FileType vimwiki,markdown :color paper
 set nocompatible
 
 " ================ General Config ====================
-set nonumber                    " Line numbers
+set number                    " Line numbers
 set relativenumber              " Relative numbers
 "set numberwidth=1
 set backspace=indent,eol,start  " Allow backspace in insert mode

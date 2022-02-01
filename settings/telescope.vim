@@ -20,13 +20,19 @@ nnoremap <silent> <leader>fu <cmd>Telescope buffers<cr>
 nnoremap <silent> <leader>ft <cmd>Telescope tags<cr>
 nnoremap <silent> <leader>ff <cmd>Telescope live_grep<cr>
 nnoremap <silent> <leader>fs <cmd>Telescope lsp_document_symbols<cr>
-nnoremap <silent> <leader>fd <cmd>Telescope lsp_document_diagnostics<cr>
+nnoremap <silent> <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <silent> <leader>fr <cmd>Telescope lsp_references<cr>
+nnoremap <silent> <leader>fi <cmd>Telescope lsp_implementations<cr>
 nnoremap <silent> <leader>fq <cmd>Telescope quickfix<cr>
+nnoremap <silent> <leader>fl <cmd>Telescope loclist<cr>
 "nnoremap <silent> <c-e> <cmd>Telescope coc mru<cr>
 nnoremap <silent> <leader>fb <cmd>Telescope git_branches<cr>
 nnoremap <silent> <leader>fh <cmd>Telescope git_stash<cr>
+nnoremap <silent> <leader>fc <cmd>Telescope git_bcommits<cr>
+nnoremap <silent> <leader>f/ <cmd>Telescope search_history<cr>
 nnoremap <silent> <leader>fe <cmd>Telescope oldfiles<cr>
 nnoremap <silent> <leader>fz <cmd>Telescope spell_suggest<cr>
+nnoremap <silent> <leader>fk <cmd>Telescope keymaps<cr>
+nnoremap <silent> <leader>fx <cmd>Telescope file_browser<cr>
 "nnoremap <silent> <c-s> <cmd>Telescope ultisnips<cr>
 

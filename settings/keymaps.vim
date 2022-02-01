@@ -151,8 +151,12 @@ nmap :ed :edit %:p:h/
 
 " Write readonly file
 cnoremap w!! w !sudo tee > /dev/null %
+"Start a terminal session
+nmap tt :terminal<CR>
 "Start a split nvim terminal
-nmap :term :sp term://zsh
+nmap :st :sp term://zsh
+"Start a vertical split nvim terminal
+nmap :vt :vertical terminal
 "Escape terminal mode in an Nvim Terminal"
 :tnoremap <Esc> <C-\><C-n>
 
