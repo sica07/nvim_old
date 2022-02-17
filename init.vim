@@ -19,6 +19,7 @@ Plug 'tpope/vim-unimpaired'
 "Plug 'pbogut/fzf-mru.vim'
 "Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-lua/popup.nvim'
+Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -36,9 +37,9 @@ Plug 'folke/trouble.nvim'
 "Automatically change to project root"
 "Plug 'airblade/vim-rooter'
 " Vim Script
-Plug 'ahmedkhalf/project.nvim'
+"Plug 'ahmedkhalf/project.nvim'
 "display indent levels
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 "undo list
 Plug 'sjl/gundo.vim'
 "tagbar
@@ -152,10 +153,6 @@ Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
 
-
-"Lua Love2d
-
-Plugin 'https://github.com/davisdude/vim-love-docs/tree/build'
 call plug#end()
 
 " update tags in background whenever you write a php, js and python file
@@ -308,7 +305,7 @@ autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
 " Always switch to the current file directory
 " (caveat: CtrlP will search just in the current folder if active)
-autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+"autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 "Git commit line should not be longer than  72 chars"
 autocmd Filetype gitcommit setlocal spell textwidth=72
