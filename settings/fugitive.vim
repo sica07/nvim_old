@@ -11,17 +11,17 @@ nnoremap <slient> <leader>gdh :diffget //2<CR>
 nnoremap <silent> <leader>gdl :diffget //3<CR>
 nnoremap <silent> <leader>gpp :diffput<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gll :Glog --  %<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 ":Git add %"
 nnoremap <silent> <leader>ga :Gwrite<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
 ":Git checkout %"
-nnoremap <silent> <leader>go :Gread<CR>
-nnoremap <silent> <leader>gw :Gwrite<CR>:GitGutter<CR>
-nnoremap <silent> <leader>gr :Gread<CR>:GitGutter<CR>
+nnoremap <silent> <leader>gr :Gread<CR>
 ":Git mv %
 nnoremap <silent> <leader>gm :Gmove<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
-nnoremap <silent> <leader>gg :GitGutterToggle<CR>
+nnoremap <silent>  ]og :Gitsigns toggle_signs<CR>
+nnoremap <silent>  [og :Gitsigns toggle_signs<CR>
