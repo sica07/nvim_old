@@ -10,10 +10,10 @@ nnoremap <silent> <leader>gd :Gvdiff<CR>
 nnoremap <slient> <leader>gdh :diffget //2<CR>
 nnoremap <silent> <leader>gdl :diffget //3<CR>
 nnoremap <silent> <leader>gpp :diffput<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gc :Git commit<CR>
 nnoremap <silent> <leader>gb :Git blame<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gll :Glog --  %<CR>
+nnoremap <silent> <leader>gl :Gclog<CR>
+nnoremap <silent> <leader>gll :Gclog --  %<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 ":Git add %"
 nnoremap <silent> <leader>ga :Gwrite<CR>
