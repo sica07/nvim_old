@@ -28,7 +28,11 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'ray-x/lsp_signature.nvim'
 "Plug 'nvim-lua/completion-nvim'
-Plug 'onsails/lspkind-nvim'
+"""Snippets and completion
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+"Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 "Plug 'akinsho/bufferline.nvim'
 "Next generation quickfix
@@ -99,16 +103,6 @@ Plug 'neomake/neomake'
 "Plug 'mkalinski/vim-lightline_neomake'
 "highlight other uses of the current word under the cursor
 Plug 'RRethy/vim-illuminate'
-"snippets"
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
 
 Plug 'windwp/nvim-autopairs'
 "Emmmet navigation
