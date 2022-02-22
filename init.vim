@@ -19,18 +19,26 @@ Plug 'tpope/vim-unimpaired'
 "Plug 'pbogut/fzf-mru.vim'
 "Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-lua/popup.nvim'
-Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 "Plug 'fannheyward/telescope-coc.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'ray-x/lsp_signature.nvim'
 "Plug 'nvim-lua/completion-nvim'
 """Snippets and completion
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ray-x/lsp_signature.nvim'
+
+Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+
+"Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+"Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 "Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
