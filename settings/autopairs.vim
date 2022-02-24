@@ -9,6 +9,6 @@ local present2, autopairs_completion = pcall(require, "nvim-autopairs.completion
    autopairs.setup()
    autopairs_completion.setup {
       map_complete = true, -- insert () func completion
-      map_cr = true,
+      map_cr = true
    }
 EOF

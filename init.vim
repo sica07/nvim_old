@@ -47,7 +47,7 @@ Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'folke/trouble.nvim'
 "Automatically change to project root"
-"Plug 'airblade/vim-rooter'
+Plug 'airblade/vim-rooter'
 " Vim Script
 "Plug 'ahmedkhalf/project.nvim'
 "display indent levels
