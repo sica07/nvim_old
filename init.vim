@@ -61,6 +61,10 @@ Plug 'windwp/nvim-spectre'
 
 "PRESENTATION
 "collections of colorschemes
+Plug 'kadekillary/skull-vim'
+Plug 'widatama/vim-phoenix'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'rakr/vim-two-firewatch'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'

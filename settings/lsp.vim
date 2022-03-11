@@ -5,6 +5,14 @@ local basic_setup = {
     --require'completion'.on_attach()
   end,
 }
+local psalm_setup = {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach()
+    --require'completion'.on_attach()
+  end,
+  cmd = {"psalm", "--language-server"}
+}
+--require'lspconfig'.psalm.setup(psalm_setup)
 require'lspconfig'.intelephense.setup(basic_setup)
 require'lspconfig'.tsserver.setup(basic_setup)
 

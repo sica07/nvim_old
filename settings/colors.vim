@@ -3,7 +3,7 @@ let g:nord_italic_comments=1
 let g:nord_bold=1
 let g:zenbones_compat = 1
 "colorscheme zenbones
-colorscheme nordbones
+"colorscheme nordbones
 let g:everforest_background = 'medium'
 let g:everforest_current_word = 'grey background'
 let g:everforest_better_performance = 1
@@ -23,3 +23,9 @@ let g:gruvbox_material_sign_column_background = 'none'
 let g:gruvbox_material_diagnostic_text_highlight = 1
 let g:gruvbox_material_diagnostic_line_highlight = 1
 "colorscheme gruvbox-material
+
+let g:two_firewatch_italics = 1
+
+"colorscheme two-firewatch
+colorscheme phoenix
+PhoenixGreenEighties

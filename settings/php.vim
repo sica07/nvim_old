@@ -17,6 +17,8 @@ augroup END
 "Fix php
 nmap  :fix :!phpcbf --standard="standard.xml" %<cr>
 let g:phpcs_std_list='standard.xml'
+
+autocmd BufWritePost *.php silent! call system('psalm --output-format=pylint '.l:filename)
 "function! RunPhpcs()
     "let l:filename=@%
     "let l:phpcs_output=system('phpcs --report=csv --standard=standard.xml '.l:filename)
