@@ -126,6 +126,8 @@ Plug 'phaazon/hop.nvim'
 "syntax highlight
 Plug 'sheerun/vim-polyglot'
 ""PHP
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+Plug 'camilledejoye/phpactor-mappings'
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 Plug 'aeke/vim-php-cs-fixer', {'for': 'php'}
 Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}

@@ -13,7 +13,8 @@ local psalm_setup = {
   cmd = {"psalm", "--language-server"}
 }
 --require'lspconfig'.psalm.setup(psalm_setup)
-require'lspconfig'.intelephense.setup(basic_setup)
+--require'lspconfig'.intelephense.setup(basic_setup)
+require'lspconfig'.phpactor.setup(basic_setup)
 require'lspconfig'.tsserver.setup(basic_setup)
 
 require'colorizer'.setup()
