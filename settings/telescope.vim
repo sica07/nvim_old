@@ -1,6 +1,7 @@
 lua require('telescope').setup()
 lua << EOF
 require('telescope').setup {
+  theme = "ivy",
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -8,10 +9,15 @@ require('telescope').setup {
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
+    },
+    file_browser = {
+        theme = "ivy",
+        layout_config = { height = 0.95 },
     }
   }
 }
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('file_browser')
 EOF
 
 " Find files using Telescope command-line sugar.

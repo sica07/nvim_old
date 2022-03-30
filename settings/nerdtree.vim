@@ -12,7 +12,7 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeKeepTreeInNewTab=1
 
 "Mappings
-nnoremap <A-1> :NERDTreeToggle<CR>
+"nnoremap <A-1> :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 "nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
 "close the NerdTree window when only one window is left"

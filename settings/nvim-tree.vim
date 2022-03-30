@@ -92,7 +92,7 @@ require'nvim-tree'.setup { }
       { key = "-",                            cb = tree_cb("dir_up") },
       { key = "s",                            cb = tree_cb("system_open") },
       { key = "q",                            cb = tree_cb("close") },
-      { key = "g?",                           cb = tree_cb("toggle_help") },
+      { key = "?",                           cb = tree_cb("toggle_help") },
     }
 EOF
 nnoremap <A-1> :NvimTreeToggle<CR>

@@ -22,6 +22,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 "Plug 'fannheyward/telescope-coc.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -250,9 +251,9 @@ set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set nofoldenable "disable folding when opening the file
+"set nofoldenable "disable folding when opening the file
 set foldmethod=marker
-set foldmarker=<,>
+set foldmarker={,}
 set foldnestmax=4       " Deepest fold is 4 levels
 set foldlevelstart=1
 " Which commands trigger auto-unfold
