@@ -13,8 +13,21 @@ local psalm_setup = {
   cmd = {"psalm", "--language-server"}
 }
 --require'lspconfig'.psalm.setup(psalm_setup)
+
 --require'lspconfig'.intelephense.setup(basic_setup)
-require'lspconfig'.phpactor.setup(basic_setup)
+local phpactor_setup = {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach()
+    --require 'completion'.on_attach()
+  end,
+  init_options = {
+    --["language_server_psalm.enabled"] = false,
+    ["completion_worse.disabled_completors"] = {},
+  }
+
+}
+
+require'lspconfig'.phpactor.setup(phpactor_setup)
 require'lspconfig'.tsserver.setup(basic_setup)
 
 require'colorizer'.setup()

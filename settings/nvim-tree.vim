@@ -95,4 +95,4 @@ require'nvim-tree'.setup { }
       { key = "?",                           cb = tree_cb("toggle_help") },
     }
 EOF
-nnoremap <A-1> :NvimTreeToggle<CR>
+nnoremap <leader>nn :NvimTreeToggle<CR>
