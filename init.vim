@@ -37,6 +37,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'quangnguyen30192/cmp-nvim-tags'
+Plug 'lukas-reineke/cmp-rg'
 
 "Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)

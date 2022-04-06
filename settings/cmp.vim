@@ -34,6 +34,7 @@ icons = {
 }
 
 vim.opt.completeopt = "menuone,noselect"
+vim.opt.pumheight = 15
 
 -- nvim-cmp setup
 cmp.setup {
@@ -55,11 +56,21 @@ cmp.setup {
             nvim_lsp = "[LSP]",
             nvim_lua = "[Lua]",
             buffer = "[BUF]",
+            tags = '[Tag]',
+            rg = '[Rg]',
          })[entry.source.name]
 
          return vim_item
       end,
    },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'tags', keyword_length = 2 },
+    { name = 'rg', keyword_length = 3 },
+    { name = 'path' },
+  },
    mapping = {
       ["<C-p>"] = cmp.mapping.select_prev_item(),
       ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -72,11 +83,24 @@ cmp.setup {
          select = true,
       },
    },
-   sources = {
-      { name = "nvim_lsp" },
-      { name = "luasnip" },
-      { name = "buffer" },
-      { name = "nvim_lua" },
-   },
+}
+vim.opt.wildignore = {
+  '*.o',
+  '*.obj,*~',
+  '*.git*',
+  '*.meteor*',
+  '*vim/backups*',
+  '*sass-cache*',
+  '*mypy_cache*',
+  '*__pycache__*',
+  '*cache*',
+  '*logs*',
+  '*node_modules*',
+  '**/node_modules/**',
+  '*DS_Store*',
+  '*.gem',
+  'log/**',
+  'tmp/**',
+  'storage/**',
 }
 EOF
