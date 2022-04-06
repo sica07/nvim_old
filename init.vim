@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
 "EXPLORING/SEARCHING CONTENT
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-dispatch'
 "Plug 'scrooloose/nerdtree'
 "fuzzy search
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -24,8 +25,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 "Plug 'fannheyward/telescope-coc.nvim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'j-hui/fidget.nvim'
 "Plug 'nvim-lua/completion-nvim'
 """Snippets and completion
 Plug 'ray-x/lsp_signature.nvim'
@@ -83,8 +86,11 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 "statusbar on steroids
-Plug 'itchyny/lightline.vim'
-"Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+"Plug 'itchyny/lightline.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'SmiteshP/nvim-gps'
+Plug 'haringsrob/nvim_context_vt'
 Plug 'vimpostor/vim-tpipeline'
 Plug 'norcalli/nvim-colorizer.lua'
 
@@ -96,9 +102,10 @@ let g:tpipeline_split = 1
 "delete, change and add such surroundings in pairs
 Plug 'tpope/vim-surround'
 "Inserts matching bracket, paren, brace or quote
-Plug 'spf13/vim-autoclose'
+Plug 'Raimondi/delimitMate'
 "best text alignment and filtering
 Plug 'godlygeek/tabular'
+Plug 'AndrewRadev/splitjoin.vim'
 
 
 ""GIT
@@ -107,6 +114,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
 ""PROGRAMMING
+Plug 'tpope/vim-dotenv'
 "Language Server
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "code commenting
@@ -116,7 +124,10 @@ Plug 'neomake/neomake'
 "Plug 'mkalinski/vim-lightline_neomake'
 "highlight other uses of the current word under the cursor
 Plug 'RRethy/vim-illuminate'
-
+"DB
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 Plug 'windwp/nvim-autopairs'
 "Emmmet navigation
 Plug 'mattn/emmet-vim', {'for': ['html','php','phtml','blade','vue']}

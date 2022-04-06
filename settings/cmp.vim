@@ -67,9 +67,10 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'buffer' },
-    { name = 'tags', keyword_length = 2 },
-    { name = 'rg', keyword_length = 3 },
+    --{ name = 'tags', keyword_length = 2 },
+    --{ name = 'rg', keyword_length = 3 },
     { name = 'path' },
+    ['vim-dadbod-completion'] = '[DB]',
   },
    mapping = {
       ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -104,3 +105,6 @@ vim.opt.wildignore = {
   'storage/**',
 }
 EOF
+
+
+autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })

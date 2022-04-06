@@ -67,13 +67,11 @@ nnoremap <leader>9 :tabn 9<cr>
 " this to vv and ss
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
-nnoremap <leader>v :vnew<CR>
-nnoremap <leader>s :new<CR>
+nnoremap <leader>vv :vnew<CR>
+nnoremap <leader>ss :new<CR>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
-nmap <leader>r :set relativenumber<CR>
-nmap <leader>R :set norelativenumber<CR>
 " Code folding options
 nmap <leader>f0 :set foldlevel=0<CR>
 nmap <leader>f1 :set foldlevel=1<CR>
