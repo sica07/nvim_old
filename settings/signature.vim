@@ -4,7 +4,7 @@ lua << EOF
       lspsignature.setup {
          bind = true,
          doc_lines = 2,
-         floating_window = true,
+         floating_window = false,
          fix_pos = true,
          hint_enable = true,
          hint_prefix = " ",

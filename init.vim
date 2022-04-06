@@ -38,9 +38,6 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 
-"Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-"Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-
 "Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 "Plug 'akinsho/bufferline.nvim'
