@@ -1,11 +1,16 @@
   let g:vimwiki_list = [{'path': '~/Dropbox/Apps/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md',
                        \ 'auto_tags': 1,
+                       \ 'auto_generate_tags': 1,
                        \ 'auto_diary_index': 1,
+                       \ 'auto_toc': 1,
+                       \ 'auto_header': 1
                        \},
                        \{'path': '~/Dropbox/Apps/vimwiki/zettelkasten',
                        \ 'syntax': 'markdown', 'ext': '.md',
-                       \ 'auto_tags': 1
+                       \ 'auto_tags': 1,
+                       \ 'auto_generate_tags': 1,
+                       \ 'auto_header': 1
                        \},
                        \{'path': '~/Dropbox/Apps/vimwiki/jwwiki',
                        \ 'syntax': 'markdown', 'ext': '.md',
@@ -21,12 +26,14 @@
 :inoremap <leader>wa <C-R>=strftime("+ [%d/%m/%Y](#%d%m%y)")<CR>
 :nnoremap <leader>wD "=strftime('#### %d/%m/%Y')<CR>P
 :inoremap <leader>wD <C-R>=strftime('#### %d/%m/%Y')<CR>
+:nnoremap <leader>wd "=strftime('%d/%m/%Y')<CR>P
+:inoremap <leader>wd <C-R>=strftime('%d/%m/%Y')<CR>
 :nnoremap <leader>w/ :VimwikiSearchTags
 :nnoremap <leader>wT :Toc<CR>
 
 :nnoremap <leader>mp :MarkdownPreview<CR>
 "let g:mkdp_path_to_chrome='/usr/bin/surf'
-let g:mkdp_browser = 'vivaldi'
+let g:mkdp_browser = 'firefox'
 
 let g:vimwiki_listsyms = '✗○◐●✓'
 let g:tagbar_type_vimwiki = {

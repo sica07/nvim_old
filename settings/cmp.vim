@@ -58,6 +58,7 @@ cmp.setup {
             buffer = "[BUF]",
             tags = '[Tag]',
             rg = '[Rg]',
+            cmd = '[cmdline]',
          })[entry.source.name]
 
          return vim_item
@@ -65,11 +66,13 @@ cmp.setup {
    },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     { name = 'luasnip' },
     { name = 'buffer' },
-    --{ name = 'tags', keyword_length = 2 },
+    { name = 'tags', keyword_length = 2 },
     --{ name = 'rg', keyword_length = 3 },
     { name = 'path' },
+    { name = 'cmdline' },
     ['vim-dadbod-completion'] = '[DB]',
   },
    mapping = {
@@ -85,25 +88,7 @@ cmp.setup {
       },
    },
 }
-vim.opt.wildignore = {
-  '*.o',
-  '*.obj,*~',
-  '*.git*',
-  '*.meteor*',
-  '*vim/backups*',
-  '*sass-cache*',
-  '*mypy_cache*',
-  '*__pycache__*',
-  '*cache*',
-  '*logs*',
-  '*node_modules*',
-  '**/node_modules/**',
-  '*DS_Store*',
-  '*.gem',
-  'log/**',
-  'tmp/**',
-  'storage/**',
-}
+
 EOF
 
 

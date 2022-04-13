@@ -36,13 +36,14 @@ Plug 'ray-x/lsp_signature.nvim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'quangnguyen30192/cmp-nvim-tags'
-Plug 'lukas-reineke/cmp-rg'
+"Plug 'lukas-reineke/cmp-rg'
 
 "Plug 'onsails/lspkind-nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
@@ -184,7 +185,7 @@ au BufWritePost *.py silent! !eval '[ -f ".git/hooks/ctags_py" ] && .git/hooks/c
 au BufWritePre * :%s/\s\+$//e
 
 " Set empty buffers/new files type to markdown
-au FileType vimwiki,markdown :color paper
+au FileType vimwiki,markdown :color zenbones | set background=light
 "au BufWritePost *.md silent! !rclone sync ~/Dropbox/Apps/vimwiki dropbox:Apps/vimwiki
 
 
@@ -198,8 +199,8 @@ au FileType vimwiki,markdown :color paper
 set nocompatible
 
 " ================ General Config ====================
-set number                    " Line numbers
-set relativenumber              " Relative numbers
+set nonumber                    " Line numbers
+set norelativenumber              " Relative numbers
 "set numberwidth=1
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set history=1000                 " Store 50 lines of command history
