@@ -22,6 +22,7 @@ EOF
 
 " Find files using Telescope command-line sugar.
 nnoremap <silent> <leader>fp <cmd>Telescope find_files<cr>
+nnoremap <silent> <leader>fw <cmd>Telescope search_string<cr>
 nnoremap <silent> <leader>fu <cmd>Telescope buffers<cr>
 nnoremap <silent> <leader>ft <cmd>Telescope current_buffer_tags<cr>
 nnoremap <silent> <leader>ff <cmd>Telescope live_grep<cr>
@@ -40,5 +41,4 @@ nnoremap <silent> <leader>fe <cmd>Telescope oldfiles<cr>
 nnoremap <silent> <leader>fz <cmd>Telescope spell_suggest<cr>
 nnoremap <silent> <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <silent> <leader>fx <cmd>Telescope file_browser<cr>
-"nnoremap <silent> <c-s> <cmd>Telescope ultisnips<cr>
 

@@ -11,9 +11,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 "EXPLORING/SEARCHING CONTENT
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-dispatch'
-"Plug 'scrooloose/nerdtree'
 "fuzzy search
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'junegunn/fzf.vim'
@@ -112,6 +112,10 @@ Plug 'AndrewRadev/splitjoin.vim'
 ""GIT
 "a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+":GV! will only list commits that affected the current file
+":GV? fills the location list with the revisions of the current file
+":GV or :GV? can be used in visual mode to track the changes in the selected lines.
+Plug 'junegunn/gv.vim'
 Plug 'lewis6991/gitsigns.nvim'
 
 ""PROGRAMMING
@@ -149,7 +153,8 @@ Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
 Plug 'alvan/vim-php-manual', {'for': 'php'}
 Plug 'Rican7/php-doc-modded', {'for': 'php'}
 Plug '2072/php-indenting-for-vim', {'for': 'php'}
-Plug 'vim-vdebug/vdebug', {'for': 'php'}
+"Plug 'vim-vdebug/vdebug', {'for': 'php'}
+Plug 'puremourning/vimspector'
 " HTML
 "autoclose html tags
 Plug 'vim-scripts/HTML-AutoCloseTag', {'for': ['html', 'blade']}
@@ -162,8 +167,8 @@ Plug 'metakirby5/codi.vim'
 " MISC
 "distraction-free writing
 Plug 'Pocco81/TrueZen.nvim'
-"Plug 'junegunn/goyo.vim'
-"Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'mattn/calendar-vim'
 Plug 'vimwiki/vimwiki'
 "vimwiki

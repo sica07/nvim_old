@@ -31,6 +31,13 @@
 :nnoremap <leader>w/ :VimwikiSearchTags
 :nnoremap <leader>wT :Toc<CR>
 
+function ListReferences()
+  !rg --vimgrep --no-hidden  % > /tmp/rg
+  :cexp system("cat /tmp/rg")
+  :Telescope quickfix
+endfunction
+:nnoremap <leader>wl :call ListReferences()<CR>
+
 :nnoremap <leader>mp :MarkdownPreview<CR>
 "let g:mkdp_path_to_chrome='/usr/bin/surf'
 let g:mkdp_browser = 'firefox'

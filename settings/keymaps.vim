@@ -158,3 +158,8 @@ nmap :vt :vertical terminal
 "Escape terminal mode in an Nvim Terminal"
 :tnoremap <Esc> <C-\><C-n>
 
+"Resizing windows
+nnoremap<S-Up> :resize +2<CR>
+nnoremap<S-Down> :resize -2<CR>
+nnoremap<S-Left> :vertical resize +2<CR>
+nnoremap<S-Right> :vertical resize -2<CR>
